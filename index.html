@@ -566,6 +566,8 @@ Error message and password prompt
 
 <li>TypesApplications</li>
 
+<li>Wireframes</li>
+
 </ul>
 </p>
 
@@ -584,7 +586,7 @@ Error message and password prompt
 {"text":"\u003Cspan class=\"transclude-edit\">\u003C$transclude tiddler={{!!title}} mode=\"inline\"/>\u003Cspan class=\"hide-until-hover transclude-edit-button\"> {{||$:/core/ui/Buttons/edit}} \u003C/span>\u003C/span>","title":"$:/(edit-inline)","tags":"$:/SaveToGitHub $:/transclude/edit","modified":"20210907160947725","description":"Transclure avec ce tiddler pour afficher un bouton d'édition : `{{NomduTiddler||(edit-inline)}}` en mode inline","created":"20210702134909188"},
 {"text":"\u003Cp class=\"transclude-edit\">\n\u003C$transclude tiddler={{!!title}} mode=\"block\"/>\n\u003Cspan class=\"hide-until-hover transclude-edit-button\"> {{||$:/core/ui/Buttons/edit}}\u003C/span>\n\u003C/p>","title":"$:/(edit)","tags":"$:/SaveToGitHub $:/transclude/edit","modified":"20210907160956376","created":"20210612222422816"},
 {"created":"20210924034425887","creator":"Théophile D.","title":"$:/AdvancedSearch","icon":"$:/core/images/advanced-search-button","color":"#bbb","text":"\u003Cdiv class=\"tc-advanced-search\">\n\u003C$macrocall $name=\"tabs\" tabsList=\"[all[shadows+tiddlers]tag[$:/tags/AdvancedSearch]!has[draft.of]]\" default=\"$:/core/ui/AdvancedSearch/System\" actions=\"\"\"\u003C$action-setfield $tiddler=\"$:/state/advancedsearch/currentTab\" text=\u003C\u003CcurrentTab>>/>\"\"\" explicitState=\"$:/state/tab--1498284803\"/>\n\u003C/div>\n","tags":"$:/right-story","modified":"20210924034425887","modifier":"Théophile D."},
-{"created":"20210924073834077","creator":"Théophile D.","title":"$:/config/AutoSave","text":"no","modified":"20210924075119781","modifier":"Théophile D."},
+{"created":"20210924073834077","creator":"Théophile D.","title":"$:/config/AutoSave","text":"no","modified":"20210924081357361","modifier":"Théophile D."},
 {"created":"20210923190618271","text":"hide","title":"$:/config/EditToolbarButtons/Visibility/$:/SaveToGitHub/Button/GitHubPermalink","modified":"20210923190618271"},
 {"created":"20210923190618800","text":"hide","title":"$:/config/EditToolbarButtons/Visibility/$:/SaveToGitHub/Button/GitHubPermaView","modified":"20210923190618800"},
 {"title":"$:/config/OfficialPluginLibrary","tags":"$:/tags/PluginLibrary","url":"https://tiddlywiki.com/prerelease/library/v5.2.0/index.html","caption":"{{$:/language/OfficialPluginLibrary}} (Prerelease)","text":"The prerelease version of the official ~TiddlyWiki plugin library at tiddlywiki.com. Plugins, themes and language packs are maintained by the core team.\n"},
@@ -677,11 +679,11 @@ Error message and password prompt
 {"created":"20210923185328171","creator":"Théophile D.","title":"$:/state/tab--86143343","text":"$:/core/ui/ControlPanel/Plugins/Installed/Plugins","modified":"20210923193115316","modifier":"Théophile D."},
 {"created":"20210923193047021","creator":"Théophile D.","title":"$:/state/tab--978133750","text":"$:/plugins/malgam/version-control/versionTab","modified":"20210923193047021","modifier":"Théophile D."},
 {"created":"20210916195931004","creator":"Théophile D.","title":"$:/state/tab-1749438307","text":"$:/core/ui/ControlPanel/Plugins","modified":"20210924034945370","modifier":"Théophile D."},
-{"created":"20210916200902977","creator":"Théophile D.","title":"$:/state/tab/sidebar--595412856","text":"$:/core/ui/SideBar/Recent","modified":"20210924073847759","modifier":"Théophile D."},
+{"created":"20210916200902977","creator":"Théophile D.","title":"$:/state/tab/sidebar--595412856","text":"$:/SaveToGitHub/Settings","modified":"20210924081355291","modifier":"Théophile D."},
 {"created":"20210916200057654","creator":"Théophile D.","title":"$:/state/tabs/controlpanel/toolbars-1345989671","text":"$:/core/ui/ControlPanel/Toolbars/ViewToolbar","modified":"20210923211205852","modifier":"Théophile D."},
 {"title":"$:/status/RequireReloadDueToPluginChange","text":"no"},
 {"created":"20210923192356127","creator":"T","title":"$:/status/UserName","text":"Théophile D.","modified":"20210923192402402","modifier":"Théophile D"},
-{"title":"$:/StoryList","created":"20210924075052973","creator":"Théophile D.","text":"","list":"Contact [[Recherche de faisabilité]] Sommaire [[Fiche TFE]]","modified":"20210924075102546","modifier":"Théophile D."},
+{"title":"$:/StoryList","created":"20210924075052973","creator":"Théophile D.","text":"","list":"Wireframes Contact [[Recherche de faisabilité]] Sommaire [[Fiche TFE]]","modified":"20210924075102546","modifier":"Théophile D."},
 {"text":"","title":"$:/tagging","tags":"$:/tagging","tagging":"after","modified":"20210907134252168","list":"$:/tagging $:/tagging/style $:/tagging/openTiddlers $:/tagging/template $:/tagging/template/after $:/tagging/template/before","created":"20210907002753004"},
 {"text":"\u003C\u003CopenTiddlers \"[tag[$(tag)$]]\" \"open all in the current tab\">> - \u003C\u003Chref-filter \"tag[$(tag)$]\" \"another tab\">>","title":"$:/tagging/openTiddlers","tags":"$:/tagging","modified":"20210907131527479","created":"20210907121748485"},
 {"text":"\u003Cdiv class=\"search-list-container\">\n\u003C$edit-text tiddler=\u003C\u003Cqualify $:/temp/search>> field=\"text\" tag=\"input\" default=\"\" placeholder=\"type to search the list..\" class=\"tc-edit-texteditor\"/>\n\u003C$reveal state=\u003C\u003Cqualify $:/temp/search>> type=\"nomatch\" text=\"\">\n\u003C$button class=\"tc-btn-invisible\">\n\u003C$action-setfield $tiddler=\u003C\u003Cqualify $:/temp/search>> text=\"\"/>\n{{$:/core/images/close-button}}\n\u003C/$button>\n\u003C/$reveal>\n\u003C/div>\n\n\u003Cul>\n\u003C$set name=search tiddler=\u003C\u003Cqualify $:/temp/search>> field=\"text\">\n\u003C$macrocall $name=\"list-tagged-draggable\" tag=\u003C\u003Clist-tag>> itemTemplate=\"$:/tagging/template/itemTemplate\" subFilter=\"search:*\u003Csearch>\"/>\n\u003C/$set>\n\u003C/ul>","title":"$:/tagging/search","tags":"$:/tagging","modified":"20210907132538208","description":"The tag must be provided with the variable list-tag","created":"20210907124741506"},
@@ -789,7 +791,8 @@ Error message and password prompt
 {"created":"20210916225205925","creator":"Théophile D.","text":"Tiddlywiki est écris en html, js et css, rendant sa customisation très accessible. Il s'agit d'un wiki contenu dans un seul fichier html. Bien que moins performant qu'une app native ([[Performances requises]]), TiddlyWiki peut s'utiliser sur le web et sur mobile, offline ou online. Il offre les fonctionnalités de recherche dont mon projet a besoin, et dispose d'une license open-source. \n\nLe sacrifice de performance permettrait d'attribuer plus de ressources à l'élaboration du design de l'intereface.","title":"Tiddlywiki","modified":"20210924052825938","tags":"[[Recherche de faisabilité]]","task":"todo","modifier":"Théophile D."},
 {"created":"20210916223800665","creator":"Théophile D.","text":"\u003Ch2 class=\"txt-c\">\nTravail de fin d'études\n\u003Ch3>Bachelier en Techniques graphiques orientation techniques infographiques\u003C/h3>\n\u003C/h2>","title":"TitreFiche","modified":"20210924034339108","modifier":"Théophile D.","tags":"[[Fiche TFE]]"},
 {"created":"20210916223922283","creator":"Théophile D.","text":"''Titre du TFE'' : Scidélice : conception d’un carnet de recettes de cuisine intelligent\n\n//\nTitre alternatif : Scidélice : conception d’un assistant de cuisine intelligent\n//","title":"TitreTFE","modified":"20210924034400304","modifier":"Théophile D.","tags":"[[Fiche TFE]]"},
-{"created":"20210917183228209","text":"* PWA\n* application hybride , ex : electron","tags":"","title":"TypesApplications","modified":"20210917185912117"}
+{"created":"20210917183228209","text":"* PWA\n* application hybride , ex : electron","tags":"","title":"TypesApplications","modified":"20210917185912117"},
+{"created":"20210924080938514","creator":"Théophile D.","text":"https://www.figma.com/proto/rshXlVpBiMOjt12dbSey7n/Scid%C3%A9lice---Wireframe?node-id=2%3A3&scaling=scale-down","tags":"pinned annexes","title":"Wireframes","modified":"20210924081348192","modifier":"Théophile D."}
 ]</script><div id="storeArea" style="display:none;"></div>
 <!--~~ Library modules ~~-->
 <div id="libraryModules" style="display:none;">
