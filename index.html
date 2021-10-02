@@ -391,6 +391,8 @@ Error message and password prompt
 
 <li>$:/tagging/template/itemTemplate</li>
 
+<li>$:/tags/BottomLeftBar/to top</li>
+
 <li>$:/tags/PageControls</li>
 
 <li>$:/tags/ViewToolbar</li>
@@ -451,6 +453,10 @@ Error message and password prompt
 
 <li>$:/ThemeTweaks</li>
 
+<li>$:/ThemeTweaks/BottomLeftBar</li>
+
+<li>$:/ThemeTweaks/BottomLeftBar/style</li>
+
 <li>$:/ThemeTweaks/button/right_story</li>
 
 <li>$:/ThemeTweaks/caption/right_story</li>
@@ -480,6 +486,8 @@ Error message and password prompt
 <li>$:/ThemeTweaks/style/texte-align</li>
 
 <li>$:/ThemeTweaks/style/tiddler_controls</li>
+
+<li>$:/ThemeTweaks/style/topbar-left</li>
 
 <li>$:/ThemeTweaks/style/warning</li>
 
@@ -807,7 +815,7 @@ button .star-empty .tc-image-star path{
 fill:none;
 }</pre>
 </div>
-<div created="20210930143259611" creator="Théophile D." modified="20211002193533565" modifier="Théophile D." title="$:/config/AutoSave">
+<div created="20210930143259611" creator="Théophile D." modified="20211002194440909" modifier="Théophile D." title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div created="20210930143427630" creator="Théophile D." modified="20210930143448463" modifier="Théophile D." title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/close-all">
@@ -10776,7 +10784,9 @@ fill:none;
 <div status="complete" title="$:/Import">
 <pre>Les tiddlers suivants ont été importés :
 
-# [[$:/ListItem/Bullet]]</pre>
+# [[$:/tags/BottomLeftBar/to top]]
+# [[$:/ThemeTweaks/BottomLeftBar]]
+# [[$:/ThemeTweaks/BottomLeftBar/style]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -14694,7 +14704,7 @@ fill:none;
 <div created="20210928115512152" creator="Théophile D." modified="20210928120045414" modifier="Théophile D." tags="$:/ListItem" title="$:/ListItem/Bullet">
 <pre>&lt;li&gt;&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/li&gt;</pre>
 </div>
-<div created="20210930135041108" creator="Théophile D." modified="20210930135958793" modifier="Théophile D." title="$:/palette">
+<div created="20210930135041108" creator="Théophile D." modified="20211002193741839" modifier="Théophile D." title="$:/palette">
 <pre>$:/palettes/Vanilla</pre>
 </div>
 <div color-scheme="dark" created="20210923185147572" description="Retro groove color scheme" license="https://github.com/morhetz/gruvbox" modified="20210923185149249" name="Gruvbox Dark" tags="$:/tags/Palette $:/ThemeTweaks/SwitchPalette/tags" title="$:/palettes/GruvboxDark" type="application/x-tiddler-dictionary">
@@ -18181,7 +18191,7 @@ padding-bottom: 10px;
 <div created="20210930140704735" creator="Théophile D." modified="20210930140704735" modifier="Théophile D." title="$:/state/compInspect/temp/commander/selectState-tiddler">
 <pre></pre>
 </div>
-<div created="20210930132515654" creator="Théophile D." modified="20211002190117489" modifier="Théophile D." title="$:/state/sidebar">
+<div created="20210930132515654" creator="Théophile D." modified="20211002193745125" modifier="Théophile D." title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210930134952644" creator="Théophile D." modified="20210930135826128" modifier="Théophile D." title="$:/state/tab--1418380610">
@@ -18208,8 +18218,8 @@ padding-bottom: 10px;
 <div created="20210930133145354" modified="20210930133145354" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/SaveToGitHub/Settings</pre>
 </div>
-<div created="20210930132250495" creator="Théophile D." modified="20211002193530020" modifier="Théophile D." title="$:/state/tab/sidebar--595412856">
-<pre>$:/bookmarks</pre>
+<div created="20210930132250495" creator="Théophile D." modified="20211002194336895" modifier="Théophile D." title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20210930133430656" creator="Théophile D." modified="20210930143830393" modifier="Théophile D." title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
@@ -18220,7 +18230,7 @@ padding-bottom: 10px;
 <div created="20210923192356127" creator="T" modified="20210923192402402" modifier="Théophile D" title="$:/status/UserName">
 <pre>Théophile D.</pre>
 </div>
-<div list="Sommaire" title="$:/StoryList">
+<div created="20211002194340112" creator="Théophile D." list="Sommaire Annexes" modified="20211002194340112" modifier="Théophile D." title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210907002753004" list="$:/tagging $:/tagging/style $:/tagging/openTiddlers $:/tagging/template $:/tagging/template/after $:/tagging/template/before" modified="20210907134252168" tagging="after" tags="$:/tagging" title="$:/tagging">
@@ -18304,6 +18314,19 @@ padding:.5em;
     &lt;/$link&gt;
     &lt;$list filter=&quot;[all[current]has[description]]&quot;&gt; - &lt;span style=&quot;font-style:italic;&quot;&gt;{{!!description}}&lt;/span&gt;&lt;/$list&gt;
 &lt;/li&gt;</pre>
+</div>
+<div created="20210825225717443" creator="Théophile D." description="todo: floating arrow as seen here https://codepen.io/ig_design/pen/yrwgwO" modified="20211002194332981" modifier="Théophile D." tags="$:/ThemeTweaks $:/tags/BottomLeftBar bookmark $:/ThemeTweaks/BottomLeftBar" task="doing" title="$:/tags/BottomLeftBar/to top">
+<pre>&lt;style&gt;
+html {
+  scroll-behavior: smooth;
+}
+
+a.not-a-link{
+text-decoration:none;
+color:&lt;&lt;color foreground&gt;&gt;;
+}
+&lt;/style&gt;
+&lt;a class=&quot;not-a-link&quot; href=&quot;#&quot; title=&quot;Remonter la page&quot;&gt;↑&lt;/a&gt;</pre>
 </div>
 <div created="20210930133922900" creator="Théophile D." list="$:/core/ui/Buttons/home $:/core/ui/Buttons/storyview $:/core/ui/Buttons/full-screen $:/core/ui/Buttons/save-wiki $:/core/ui/Buttons/control-panel $:/core/ui/Buttons/more-page-actions $:/SaveToGitHub/Button $:/core/ui/Buttons/close-all $:/core/ui/Buttons/fold-all $:/core/ui/Buttons/unfold-all $:/core/ui/Buttons/permaview $:/core/ui/Buttons/new-tiddler $:/core/ui/Buttons/new-journal $:/core/ui/Buttons/new-image $:/core/ui/Buttons/import $:/core/ui/Buttons/export-page $:/core/ui/Buttons/advanced-search $:/plugins/kookma/commander/buttons/pagecontrol $:/core/ui/Buttons/manager $:/core/ui/Buttons/tag-manager $:/core/ui/Buttons/language $:/core/ui/Buttons/palette $:/core/ui/Buttons/theme $:/core/ui/Buttons/encryption $:/core/ui/Buttons/timestamp $:/core/ui/Buttons/print $:/core/ui/Buttons/refresh $:/ThemeTweaks/SwitchPalette/button" modified="20210930143849579" modifier="Théophile D." title="$:/tags/PageControls">
 <pre></pre>
@@ -18770,6 +18793,20 @@ subFilter=&lt;&lt;subFilter&gt;&gt;
 <div bag="default" created="20210907011026232" description="Various theme tweaks to improve the look and feel of TW (according to me)" list="$:/ThemeTweaks $:/ThemeTweaks/button/right_story $:/ThemeTweaks/caption/right_story $:/ThemeTweaks/font/style/Roboto_Slab $:/ThemeTweaks/icon/external_link $:/ThemeTweaks/icon/warning $:/ThemeTweaks/svg/style/external_link $:/ThemeTweaks/style/fold_banner $:/ThemeTweaks/style/fonts $:/ThemeTweaks/style/hide-until-hover $:/ThemeTweaks/style/right_story $:/ThemeTweaks/style/sidebar $:/ThemeTweaks/style/texte-align $:/ThemeTweaks/style/tiddler_controls $:/ThemeTweaks/style/warning" modified="20210923184132624" revision="0" tagging="after" tags="$:/ThemeTweaks $:/TiddlyTweaks" title="$:/ThemeTweaks">
 <pre></pre>
 </div>
+<div created="20211002000611860" modified="20211002194157366" tagging="after" tags="$:/tags/TopLeftBar $:/ThemeTweaks $:/ThemeTweaks/BottomLeftBar" title="$:/ThemeTweaks/BottomLeftBar">
+<pre>&lt;span class=&quot;tc-bottombar-left&quot;&gt;&lt;$list filter=&quot;[tag[$:/tags/BottomLeftBar]]&quot;&gt;&lt;$transclude/&gt;&lt;/$list&gt;&lt;/span&gt;</pre>
+</div>
+<div created="20211002000712270" modified="20211002194131344" tags="$:/tags/Stylesheet $:/ThemeTweaks $:/ThemeTweaks/BottomLeftBar" title="$:/ThemeTweaks/BottomLeftBar/style" type="text/css">
+<pre>.tc-topbar.tc-topbar-left .tc-bottombar-left{
+	position:fixed;
+	left:0;
+	bottom:0;
+}
+
+.tc-topbar.tc-topbar-left .tc-bottombar-left&gt;*{
+padding: 8px;
+}</pre>
+</div>
 <div bag="default" caption="Move tiddler to the right" created="20210728115549996" creator="Théophile D." description="Move tiddler to right column" modified="20210928142726168" modifier="Théophile D." revision="0" tags="$:/tags/Macro $:/tags/ViewToolbar $:/tags/EditToolbar $:/ThemeTweaks" title="$:/ThemeTweaks/button/right_story">
 <pre>\whitespace trim
 &lt;$button actions=&lt;&lt;right-story-toggle&gt;&gt; class=&quot;tc-btn-invisible&quot; tooltip={{$:/ThemeTweaks/caption/right_story}}&gt;
@@ -19099,6 +19136,11 @@ display:none;
 
 }</pre>
 </div>
+<div created="20211001224927493" modified="20211002000629516" tags="$:/tags/Stylesheet $:/ThemeTweaks" title="$:/ThemeTweaks/style/topbar-left" type="text/css">
+<pre>.tc-topbar.tc-topbar-left{
+	left:0;top:0;
+}</pre>
+</div>
 <div bag="default" created="20210727145647733" modified="20210922145348752" revision="0" tags="$:/ThemeTweaks $:/tags/Stylesheet" title="$:/ThemeTweaks/style/warning">
 <pre>&lt;pre&gt;
 .tc-quote.warning {
@@ -19331,7 +19373,7 @@ fill={{{[&lt;fill&gt;]:reduce[{$:/palette}getindex&lt;currentTiddler&gt;match[in
 <div bag="default" created="20210922142730326" description="Tool used for compression : https://jakearchibald.github.io/svgomg/" modified="20210922145051209" revision="0" source="https://upload.wikimedia.org/wikipedia/commons/5/5a/Wikipedia%27s_W.svg https://www.wikipedia.org/" tags="$:/ThemeTweaks $:/tags/Image [[ $:/ThemeTweaks/style/external_link]] $:/ThemeTweaks/svg" title="$:/ThemeTweaks/svg/wikipedia">
 <pre>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;22pt&quot; height=&quot;22pt&quot; fill-rule=&quot;evenodd&quot; stroke-miterlimit=&quot;10&quot; shape-rendering=&quot;geometricPrecision&quot; viewBox=&quot;0 0 128 128&quot;&gt;&lt;path d=&quot;M120.8 29.2c0 .4 0 .8-.3 1.1-.3.4-.6.5-.9.5-2.5.3-4.5 1-6 2.4-1.7 1.4-3.3 4-5 7.8L82.8 99.3c-.2.5-.6.8-1.4.8-.6 0-1.1-.3-1.4-.8L65.5 68.9 48.9 99.2c-.4.5-.9.8-1.5.8-.7 0-1.2-.3-1.4-.8L20.6 41a20.1 20.1 0 0 0-5-7.5 13.7 13.7 0 0 0-7.3-2.7c-.3 0-.6-.1-.8-.4-.2-.3-.3-.6-.3-1 0-1 .2-1.4.8-1.4l7 .3a71 71 0 0 0 13.8 0l7.8-.3c.5 0 .8.5.8 1.4 0 1-.2 1.4-.5 1.4-2.3.2-4 .8-5.3 1.7-1.3 1-2 2.3-2 3.9 0 .8.3 1.8.8 3l21 47.3 11.9-22.4L52.2 41c-2-4-3.6-6.8-5-8a9.9 9.9 0 0 0-5.7-2.2c-.3 0-.5-.1-.7-.4-.2-.3-.3-.6-.3-1 0-1 .2-1.4.7-1.4 2.2 0 4.3.1 6.2.3a50.9 50.9 0 0 0 12.2 0l6.9-.3c.5 0 .8.5.8 1.4 0 1-.1 1.4-.5 1.4-4.5.3-6.8 1.6-6.8 3.9 0 1 .5 2.6 1.6 4.7l7.3 14.9 7.3-13.6c1-2 1.5-3.6 1.5-5 0-3-2.2-4.7-6.7-4.9-.5 0-.7-.4-.7-1.4 0-.3.2-.6.4-1 .2-.3.4-.4.6-.4l6 .3a62.3 62.3 0 0 0 10.1 0l6.4-.3c.4 0 .6.4.6 1.2 0 1-.3 1.6-1 1.6-2.7.3-4.8 1-6.4 2.2a27.8 27.8 0 0 0-6 8l-9.7 18 13.1 26.8 19.4-45.1c.7-1.7 1-3.2 1-4.6 0-3.3-2.2-5-6.7-5.3-.4 0-.6-.4-.6-1.4 0-1 .3-1.4.9-1.4l5.8.3a54 54 0 0 0 10.5 0l5.4-.3c.5 0 .8.4.8 1.2z&quot;/&gt;&lt;/svg&gt;</pre>
 </div>
-<div bag="default" caption="{{$:/ThemeTweaks/SwitchPalette/image}} Switch palette" created="20201210171047824" creator="Théophile D." description="Choose a colour palette" modified="20210929134955169" modifier="Théophile D." revision="0" source="[[modified from https://nicolas.petton.fr/tw/notebook.html]]" tags="$:/tags/PageControls $:/ThemeTweaks/SwitchPalette $:/tags/TopRightBar" title="$:/ThemeTweaks/SwitchPalette/button" type="text/vnd.tiddlywiki">
+<div bag="default" caption="{{$:/ThemeTweaks/SwitchPalette/image}} Switch palette" created="20201210171047824" description="Choose a colour palette" modified="20211002193715921" revision="0" source="[[modified from https://nicolas.petton.fr/tw/notebook.html]]" tags="$:/tags/PageControls $:/ThemeTweaks/SwitchPalette $:/tags/TopLeftBar" task="doing" title="$:/ThemeTweaks/SwitchPalette/button" type="text/vnd.tiddlywiki">
 <pre>\whitespace trim
 &lt;$vars 
 palettes=&quot;[all[tiddlers+shadows]tag[$:/ThemeTweaks/SwitchPalette/tags]]&quot; 
