@@ -227,6 +227,12 @@ Error message and password prompt
 
 <li>$:/Combobox/Style</li>
 
+<li>$:/config/BrowserStorage/Enabled</li>
+
+<li>$:/config/BrowserStorage/QuotaExceededAlert</li>
+
+<li>$:/config/BrowserStorage/SaveFilter</li>
+
 <li>$:/config/OfficialPluginLibrary</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
@@ -407,6 +413,8 @@ Error message and password prompt
 
 <li>$:/state/plugin-info--1422204026-$:/plugins/flibbles/relink-titles---994621442</li>
 
+<li>$:/state/plugin-info--391242618-$:/plugins/tiddlywiki/browser-storage--605768392</li>
+
 <li>$:/state/showeditpreview</li>
 
 <li>$:/state/sidebar</li>
@@ -559,6 +567,9 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 <script class="tiddlywiki-tiddler-store" type="application/json">[
 {"created":"20220112030937681","text":".combobox {\n`--`dropdown-button:20px;\n position: relative;\n display: inline-flex;\n padding-right: var(`--`dropdown-button);\n background:\u003C\u003Ccolor dropdown-background>>;\n /*border:2px inset #e3e3e3;*/\n height: fit-content;\n}\n\n.combobox input {\n border:0;\n background:unset;\n width:100%;\n}\n\n.combobox select {\n position: absolute;\n width: 100%;\n opacity:0;\n clip-path: inset(0 0 0 calc(100% - var(`--`dropdown-button)));\n pointer-events:all;\n cursor:pointer;\n}\n\n/*Custom dropdown button*/\n.combobox:after {\n content:\"\";\n position: absolute;\n inset: 0 0 0 auto;\n width: var(`--`dropdown-button);\n background: center / 8px no-repeat;\n pointer-events:none;\n background-image:var(`--`url);\n \u003C$let svg=\"$:/core/images/down-arrow\" fill=\"foreground\">{{$:/ThemeTweaks/svg/url}}\u003C/$let>\n}","tags":"$:/tags/Stylesheet $:/Modular/Tool/FontManager $:/ThemeTweaks/svg/url","title":"$:/Combobox/Style","modified":"20220131161821910"},
+{"created":"20220201021015655","text":"yes","title":"$:/config/BrowserStorage/Enabled","modified":"20220201021015655"},
+{"created":"20220201020841620","title":"$:/config/BrowserStorage/QuotaExceededAlert","text":"Save failed : Browser Storage is satured !","modified":"20220201020911705"},
+{"created":"20220201020810159","title":"$:/config/BrowserStorage/SaveFilter","text":"[prefix[$:/state/]] -[prefix[$:/state/popup/]] [tag[font]]","modified":"20220201021002410"},
 {"title":"$:/config/OfficialPluginLibrary","tags":"$:/tags/PluginLibrary","url":"https://tiddlywiki.com/prerelease/library/v5.2.2/index.html","caption":"{{$:/language/OfficialPluginLibrary}} (Prerelease)","text":"The prerelease version of the official ~TiddlyWiki plugin library at tiddlywiki.com. Plugins, themes and language packs are maintained by the core team.\n"},
 {"created":"20220113164435672","text":"show","title":"$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home","modified":"20220113164435672"},
 {"created":"20220113161502020","text":"yes","title":"$:/config/RelinkOnRename","modified":"20220113161502020"},
@@ -649,6 +660,7 @@ Error message and password prompt
 {"created":"20220131161349535","title":"$:/state/folded/Home","text":"show","modified":"20220131161455945"},
 {"created":"20220113162657165","title":"$:/state/new-category","text":"","modified":"20220201014722356"},
 {"created":"20220131153511653","title":"$:/state/plugin-info--1422204026-$:/plugins/flibbles/relink-titles---994621442","text":"contents","modified":"20220131153514522"},
+{"created":"20220201020659472","title":"$:/state/plugin-info--391242618-$:/plugins/tiddlywiki/browser-storage--605768392","text":"settings","modified":"20220201021413359"},
 {"created":"20220113165341104","title":"$:/state/showeditpreview","text":"no","modified":"20220131172631051"},
 {"created":"20220113161829563","title":"$:/state/sidebar","text":"yes","modified":"20220201012012320"},
 {"created":"20220131173531184","title":"$:/state/SideNav","text":"show","modified":"20220201014153374"},
@@ -659,7 +671,7 @@ Error message and password prompt
 {"created":"20220113161358949","title":"$:/state/tab/sidebar--595412856","text":"$:/core/ui/SideBar/Open","modified":"20220201015225266"},
 {"created":"20220113164432826","title":"$:/state/tabs/controlpanel/toolbars-1345989671","text":"$:/core/ui/ControlPanel/Toolbars/ViewToolbar","modified":"20220131222720871"},
 {"title":"$:/status/RequireReloadDueToPluginChange","text":"no"},
-{"created":"20220201015301739","title":"$:/StoryList","text":"","list":"Home $:/ControlPanel $:/plugins/tiddlywiki/browser-storage $:/Modular/PageTemplate/UI $:/Modular/PageTemplate/UI/Style","modified":"20220201015301739"},
+{"title":"$:/StoryList","created":"20220201020949441","text":"","list":"$:/plugins/tiddlywiki/browser-storage $:/temp/BrowserStorage/Log $:/config/BrowserStorage/SaveFilter","modified":"20220201020949441"},
 {"created":"20220131223102155","title":"$:/tags/StoryTiddlerTemplateFilter","list":"FullScreenTiddler $:/config/StoryTiddlerTemplateFilters/draft $:/config/StoryTiddlerTemplateFilters/default","modified":"20220131223102155"},
 {"title":"$:/Tasker","text":"","bag":"default","created":"20210816112626171","description":"Add a button to set a task status to a tiddler. Integrate with $:/Tasker/Kanban","modified":"20210922211148081","revision":"0","tagging":"after","tags":"$:/Tasker/Kanban $:/TiddlyTweaks"},
 {"title":"$:/Tasker/(task-list-doing-tag)","text":"\u003Cul>\n\u003C$list filter=\"[tag{!!title}task[doing]!sort[modified]]\">\n{{||$:/Tasker/(task)}}\u003Cbr>\n\u003C/$list>\n\u003C/ul>","bag":"default","created":"20210707171304857","modified":"20210922211452851","revision":"0","tags":"$:/Tasker $:/Tasker/Kanban"},
