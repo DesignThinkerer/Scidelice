@@ -1,0 +1,27 @@
+created: 20230502030301332
+modified: 20230524095538368
+title: $:/plugins/Telumire/Scidelice/WIP/UX
+
+Usually the UI/UX design process includes the following steps:
+
+* ''Research'': This involves gathering information about the target audience, their needs, and the business objectives of the project.
+* ''Analysis'': This step involves analyzing the research data to identify patterns, trends, and insights that can inform the design process.
+* ''Ideation'': This step involves generating a wide range of potential solutions to the design problem, using brainstorming, sketching, or other ideation techniques.
+* ''Prototyping'': This step involves creating low-fidelity or high-fidelity prototypes of the design solution to test and refine its functionality and usability.
+* ''Testing'': This step involves testing the prototypes with real users to gather feedback and insights that can inform further iterations of the design.
+* Implementation: This step involves creating the final design solution, including any necessary coding or development work.
+* ''Evaluation'': This step involves evaluating the final product or solution to determine its effectiveness in meeting the user needs and business objectives.
+
+;Tools to provides
+
+User experience maps associated with each component, describing how the user will interact with the component and in what context.
+
+Personnas
+
+Tool for generating color palette
+
+Tool for fonts: Font pairing, accessibility, font manager, Charcode table
+
+Brainstorming: chatgpt integration could help ?
+
+The graphic rules of your project are described in tiddlers tagged with $:/Modular/Identity

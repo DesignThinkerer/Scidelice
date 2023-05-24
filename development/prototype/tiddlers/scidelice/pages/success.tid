@@ -1,0 +1,10 @@
+created: 20220107172557540
+description: Cooking progress
+icon: $:/core/images/save-button
+modified: 20230524095510949
+revision: 0
+tags: $:/Modular/Nav/item
+title: $:/plugins/Telumire/Scidelice/Pages/Success
+type: text/vnd.tiddlywiki
+
+Débloquer des réussites si les conditions sont remplies.

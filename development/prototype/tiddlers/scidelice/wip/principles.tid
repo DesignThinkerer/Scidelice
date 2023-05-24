@@ -1,0 +1,18 @@
+created: 20230428012923073
+modified: 20230524095538448
+tags: 
+title: $:/plugins/Telumire/Scidelice/WIP/Principles
+
+!! Goal
+
+The goal of ''Modular'' is to help you create your own tiddlywiki edition/custom web app.
+
+!!! Principles
+
+* [[Modularity|$:/plugins/Telumire/Scidelice/WIP/Modularity]]: Code modularly and with ease of customization in mind.
+* [[Documentation|$:/plugins/Telumire/Modular/Documentation]]: Provide clear documentation and tools for project management and visual identity.
+* [[UX|$:/plugins/Telumire/Scidelice/WIP/UX]]: Emphasize user experience and accessibility.
+* [[Teamwork|Modular/Teamwork]]: Encourage collaboration and contribution.
+* [[Coherence|$:/plugins/Telumire/Scidelice/WIP/Coherence]]: Keep code and documentation simple and straightforward.
+* [[Performances|$:/plugins/Telumire/Scidelice/WIP/Performances]]: Optimize for performance and efficiency.
+* [[Simplicity|Modular/Simplicity]]: Avoid unnecessary or excessive design elements.

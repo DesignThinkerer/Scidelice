@@ -1,0 +1,12 @@
+author: Théophile Desmedt
+color-scheme: dark
+created: 20220131174318063
+description: Default color theme (Dark)
+modified: 20230524095537553
+name: Default Dark
+revision: 0
+tags: $:/Modular/Palettes
+title: $:/plugins/Telumire/Scidelice/Palettes/DefaultDark
+type: application/x-tiddler-dictionary
+
+background:#2c2c2c

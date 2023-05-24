@@ -1,0 +1,67 @@
+created: 20220131180626685
+modified: 20230524095536305
+revision: 0
+tags: $:/plugins/Telumire/Scidelice/app $:/tags/Stylesheet
+title: $:/plugins/Telumire/Scidelice/app/Style
+type: text/vnd.tiddlywiki
+
+\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline html
+
+
+.app {
+/* Couleurs */
+--dark-background:black;
+--dark-foreground:white;
+
+
+height:100%;
+width:100%;
+display:grid;
+grid-template-areas: 
+    "header header"
+    "sidenav main";
+grid-template-columns:max-content 1fr;
+grid-template-rows:max-content 1fr;
+background:var(--dark-background);
+color:var(--dark-foreground);
+fill:red;
+}
+
+ .app .app-main *{
+border:unset;
+background:inherit;
+color:inherit;
+}
+
+.app .app-header {
+grid-area: header;
+height:fit-content;
+padding:0;
+}
+
+.app .app-header button svg {
+margin: 20px;
+opacity:1;
+}
+
+.app .app-header button *{
+fill:inherit;
+}
+
+.app .app-header .app-title{
+margin:0 auto;
+}
+
+.app .app-main {
+grid-area: main;
+}
+
+.app .app-nav{
+grid-area: sidenav;
+}
+
+.app div.tc-tiddler-frame.tc-storyview-zoomin-tiddler {
+position:relative;
+width:100%;
+height:100%;
+}

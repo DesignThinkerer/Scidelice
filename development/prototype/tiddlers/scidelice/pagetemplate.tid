@@ -1,0 +1,8 @@
+created: 20220131165213792
+modified: 20230524095536936
+revision: 0
+tags: $:/plugins/Telumire/Scidelice
+title: $:/plugins/Telumire/Scidelice/PageTemplate
+type: text/vnd.tiddlywiki
+
+<<list-links "[{!!title}tagging[]]">>
