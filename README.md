@@ -1,6 +1,8 @@
 # Scidelice
 
-Scidelice is a progressive web application aimed at helping users learn to cook and plan their meals based on their specific needs. The application provides information on the calories and nutrients of recipes, allows users to create their own recipes, and offers personalized suggestions based on their goals and preferences. It also includes articles providing culinary and dietary information.
+Scidélice is a progressive web application developed as part of my final thesis to get my bachelor's degree in computer graphics at the Haute Ecole en Hainaut. 
+
+It aims to help users learn to cook and plan their meals based on their nutritional needs and preferences. The application provides information on the calories and nutrients of recipes, allows users to create their own recipes, and offers personalized suggestions based on their goals and preferences. It also includes articles providing culinary and dietary information. Scidelice is developed with Angular, Ionic, and TiddlyWiki for prototyping purposes.
 
 # Features
 
@@ -10,6 +12,8 @@ Scidelice is a progressive web application aimed at helping users learn to cook 
 - Culinary and Dietary Articles: Scidélice includes articles providing information on various culinary and dietary topics.
 
 ## Project Structure
+
+This repository contains the source code and documentation for the Scidélice project, organized into the following directories:
 
 - `documentation/`: general documentation files, such as specifications, diagrams, etc.
 - `development/`:  source code of the application.
