@@ -35,7 +35,7 @@ If you want to contribute to this project, you can check the list of open issues
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
