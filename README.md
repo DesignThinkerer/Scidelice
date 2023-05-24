@@ -19,10 +19,10 @@ Scidelice is a progressive web application aimed at helping users learn to cook 
 
 ## Technologies Used
 
-- Tiddlywiki: Used for prototyping and documentation purposes during the initial stages of development. It provided a convenient way to create a functional prototype and gather feedback before transitioning to Angular and Ionic for the full-fledged development.
-- Angular: The application is built using the Angular framework, providing a robust and scalable architecture.
-- Ionic: Ionic is used for the UI components and mobile app development capabilities.
-- Open Food Facts API: Scidélice integrates with the Open Food Facts API to retrieve nutritional information for recipes.
+- [Tiddlywiki](https://tiddlywiki.com): Used for prototyping and documentation purposes during the initial stages of development. It provided a convenient way to create a functional prototype and gather feedback before transitioning to Angular and Ionic for the full-fledged development.
+- [Angular](https://angular.io): The application is built using the Angular framework, providing a robust and scalable architecture.
+- [Ionic](https://ionicframework.com/docs?=): Ionic is used for the UI components and mobile app development capabilities.
+- [Open Food Facts API](https://openfoodfacts.github.io/api-documentation): Scidélice integrates with the Open Food Facts API to retrieve nutritional information for recipes.
 - HTML/CSS/JavaScript: These core web technologies are used for implementing the user interface and application logic.
 
 ## How to contribute
