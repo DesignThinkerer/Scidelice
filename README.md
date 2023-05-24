@@ -9,36 +9,32 @@ Scidélice is a progressive web application aimed at helping users learn to cook
 - Personalized Suggestions: The application offers recipe suggestions tailored to the user's goals and preferences.
 - Culinary and Dietary Articles: Scidélice includes articles providing information on various culinary and dietary topics.
 
-## Objectifs
+## Project Structure
 
-- Suivi de l'avancement du projet
-- Planification du travail à effectuer
-- Collaboration et partage des progrès
-- Recevoir des retours et des suggestions pour améliorer le projet
+- `documentation/`: general documentation files, such as specifications, diagrams, etc.
+- `development/`:  source code of the application.
+- `resources/`: project resources, such as images or data files.
+- `reports/`: reports written throughout the project.
+- `screenshots/`: screenshots illustrating the interface and features of the application.
 
-## Structure du projet
+## Technologies Used
 
-- `documentation/` : Ce répertoire contient les fichiers de documentation générale, tels que les spécifications, les diagrammes, etc.
-- `development/` : Ce répertoire contient le code source de l'application.
-- `resources/` : Ce répertoire contient les ressources nécessaires au projet, comme les images ou les fichiers de données.
-- `reports/` : Ce répertoire contient les différents rapports rédigés tout au long du projet.
-- `screenshots/` : Ce répertoire contient les captures d'écran illustrant l'interface et les fonctionnalités de l'application.
+- Tiddlywiki: Used for prototyping and documentation purposes during the initial stages of development. It provided a convenient way to create a functional prototype and gather feedback before transitioning to Angular and Ionic for the full-fledged development.
+- Angular: The application is built using the Angular framework, providing a robust and scalable architecture.
+- Ionic: Ionic is used for the UI components and mobile app development capabilities.
+- Open Food Facts API: Scidélice integrates with the Open Food Facts API to retrieve nutritional information for recipes.
+- HTML/CSS/JavaScript: These core web technologies are used for implementing the user interface and application logic.
 
-## Suivi de l'avancement
+## How to contribute
 
-J'utiliserai la fonctionnalité des "issues" de GitHub pour suivre les tâches et les problèmes à résoudre.  Chaque tâche doit être accompagnée d'une description détaillée et des échéances prévues.
-
-## Comment contribuer
-
-Si vous souhaitez contribuer à ce projet, vous pouvez consulter la liste des "issues" ouvertes pour voir quelles tâches sont disponibles. N'hésitez pas à ajouter des commentaires, des suggestions ou à soumettre des "pull requests" pour proposer des améliorations.
+If you want to contribute to this project, you can check the list of open issues to see what tasks are available. Feel free to add comments, suggestions or submit pull requests to suggest improvements.
 
 ## License
 
-Ce projet est sous license [MIT License](LICENSE).
+This project is licensed under the MIT License.
 
-N'hésitez pas à consulter le projet sur GitHub pour suivre ma progression et apporter vos commentaires et suggestions. Votre contribution sera grandement appréciée.
+## Contact
 
-Merci de votre intérêt et de votre soutien dans cette phase cruciale de mon travail de fin d'études.
+For any inquiries or feedback, please contact the project maintainer at theophiledesmedt@gmail.com.
 
-Cordialement,
-Théophile Desmedt
+Thank you for your interest in Scidélice!
