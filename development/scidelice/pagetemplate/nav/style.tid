@@ -1,0 +1,51 @@
+created: 20220131171144108
+modified: 20230524095537883
+revision: 0
+tags: $:/tags/Stylesheet $:/plugins/Telumire/Scidelice/PageTemplate/Nav
+title: $:/plugins/Telumire/Scidelice/PageTemplate/Nav/Style
+type: text/vnd.tiddlywiki
+
+.app-nav .tc-menu-list-item .tc-droppable,
+.app-nav .tc-menu-list-item .tc-droppable div:not([class]),
+.app-nav .tc-menu-list-item .tc-droppable div:not([class]) a,
+.app-nav .tc-menu-list-item+.tc-droppable
+{
+display:flex;
+width:100%;
+height:100%;
+position:relative;
+}
+
+.app-nav .tc-droppable-placeholder{
+position:absolute;
+inset:0;
+bottom:100%;
+height:2px;
+}
+
+.app-nav .tc-menu-list-item:hover{
+font-weight:bold;
+}
+
+.app-nav .tc-menu-list-item div a{
+padding:1em;
+align-items: center;
+gap:1em;
+font:inherit;
+text-decoration:none;
+opacity:.33;
+}
+
+.app-nav .tc-menu-list-item div a:hover{
+{{$:/plugins/Telumire/Scidelice/Snippet/CSS/TransitionOpacity}}
+}
+
+.app-nav {
+background-color:{{{[[$:/plugins/Telumire/Scidelice/Palettes/DefaultDark]getindex[background]]}}};
+}
+
+/* .side-nav .tc-menu-list-item+.tc-droppable{
+	position:relative;
+	width:100%;
+	display:block;
+} */

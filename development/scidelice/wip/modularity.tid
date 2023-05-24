@@ -1,0 +1,15 @@
+created: 20230502030019907
+modified: 20230524095538134
+title: $:/plugins/Telumire/Scidelice/WIP/Modularity
+
+Styles should be arranged using @layers and container query.
+
+Use components :
+
+* Template
+* Style
+* Macros
+
+Atomic components are single, self-contained component used in Molecular components, who are a set of components customized to create it's own thing.
+
+Tags : $:/Modular/Atomic/Component, $:/Modular/Molecular/Component

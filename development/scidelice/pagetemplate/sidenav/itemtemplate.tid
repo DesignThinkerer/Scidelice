@@ -1,0 +1,6 @@
+code-body: yes
+created: 20230516155410501
+modified: 20230524095537470
+title: $:/plugins/Telumire/Scidelice/PageTemplate/SideNav/itemTemplate
+
+<$link tooltip={{!!description}}><$transclude tiddler={{!!icon}} /> <$text text={{{ [{!!title}split[/]last[]] }}}/></$link>

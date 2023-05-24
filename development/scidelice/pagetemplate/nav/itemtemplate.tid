@@ -1,0 +1,12 @@
+created: 20220112065904091
+icon: $:/core/images/edit-button
+modified: 20230524095537305
+revision: 0
+tags: $:/plugins/Telumire/Scidelice/PageTemplate/Nav
+title: $:/plugins/Telumire/Scidelice/PageTemplate/Nav/itemTemplate
+type: text/vnd.tiddlywiki
+
+<$link><$let 
+fill={{{[{$:/palette}getindex{!!color}]~[{$:/palettes/Vanilla}getindex{!!color}]~[[$:/config/DefaultColourMappings/]addsuffix{!!color}get[text]]~[subfilter{!!color}]}}}
+svg={{{[subfilter{!!icon}get[text]]~[{!!icon}!search[[]then{!!icon}]~[subfilter{!!icon}~[[$:/core/images/blank]]}}}
+><svg fill=<<fill>> width="22pt" height="22pt"><<svg>></svg></$let><span><$view field="caption"><$text text={{{[{!!title}trim[$:/Modular/Component/]]}}}/></$view></span></$link>

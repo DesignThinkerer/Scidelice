@@ -1,0 +1,66 @@
+created: 20230515235219825
+description: description of $:/plugins/Telumire/Modular/Component/Home
+modified: 20230524095538047
+tags: Accueil
+temp-new-pages: 
+title: $:/plugins/Telumire/Scidelice/Pages
+
+\define add-pages()
+<$list filter="
+[{!!temp-new-pages}split[
+]trim[ ]!is[blank]]
+:map[<..currentTiddler>addsuffix[/]addsuffix{!!title}]
+" variable="item">
+<$action-createtiddler $basetitle=<<item>> tags={{{ [{!!title}format:titlelist[]] }}}>
+</$list>
+\end
+
+\define update-title()
+<$action-sendmessage $message="tm-rename-tiddler" from={{{ [{!!title}format:titlelist[]] }}} to={{{ [{!!temp-new-title}format:titlelist[]] }}} />
+\end
+
+<ul class="pages-list">
+<$list filter="[all[tiddlers+shadows]prefix{!!title}!{!!title}]" variable="page">
+<details>
+<summary><$link to=<<page>>><$text text={{{ [<page>removeprefix{!!title}removeprefix[/]] }}}/></$link>
+</summary>
+
+<$tiddler tiddler=<<page>> >
+<div class={{{ icon $:/core/images/linkify +[join[ ]] }}} title="title">
+<$edit-text class="tc-edit-texteditor" field="temp-new-title" default={{!!title}} placeholder={{!!title}}/>
+<$button actions=<<update-title>> >update</$button>
+</div>
+</$tiddler>
+
+<div class="icon $:/core/images/info-button" title="description">
+<$edit-text class="tc-edit-texteditor" tag="textarea" tiddler=<<page>> field="description" default={{{ "description of "[<page>]+[join[]] }}}/>
+</div>
+
+<div class="icon $:/core/images/tag-button" title="tags">
+<$tiddler tiddler=<<page>> >
+<$let tagListFilter="">{{||$:/plugins/Telumire/Scidelice/Tool/TagPicker}}</$let>
+</$tiddler>
+</div>
+
+<div class="icon $:/core/images/layout-button" title="wireframe">
+<$checkbox tiddler=<<page>> field="edit-wireframe-link"  checked="true"/>
+<$list filter="[<page>]:filter[{!!edit-wireframe-link}match[true]]">
+<$edit-text field="wireframe" placeholder="wireframe"/>
+</$list>
+<$list filter="[<page>]:filter[{!!edit-wireframe-link}!match[true]]">
+<$transclude tiddler={{!!wireframe}}/>
+</$list>
+</div>
+</details>
+</$list>
+</ul>
+
+<p>
+<$edit-text class="tc-edit-texteditor" tag="textarea" field="temp-new-pages" placeholder="Une par ligne"/>
+</p>
+<$button actions=<<add-pages>> >Ajouter</$button>
+
+<style>
+.pages-list .icon{display:flex;gap:.5ch;}
+.pages-list .icon div:first-child{flex:1;}
+</style>

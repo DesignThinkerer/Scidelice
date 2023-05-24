@@ -1,0 +1,9 @@
+created: 20220112074821696
+modified: 20230524095537803
+revision: 0
+tags: $:/plugins/Telumire/Scidelice/PageTemplate/Nav/Style $:/plugins/Telumire/Modular/Tool/FontManager
+title: $:/plugins/Telumire/Scidelice/Snippet/CSS/TransitionOpacity
+type: text/vnd.tiddlywiki
+
+<<transition "opacity 150ms ease-in-out">>
+opacity: 1;
