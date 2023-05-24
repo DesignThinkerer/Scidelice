@@ -1,3 +1,14 @@
+# Scidélice
+
+Scidélice is a progressive web application aimed at helping users learn to cook and plan their meals based on their specific needs. The application provides information on the calories and nutrients of recipes, allows users to create their own recipes, and offers personalized suggestions based on their goals and preferences. It also includes articles providing culinary and dietary information.
+
+# Features
+
+- Recipe Database: Scidélice integrates with the Open Food Facts database to retrieve nutritional information for recipes.
+- Recipe Creation: Users can create and save their own recipes within the application.
+- Personalized Suggestions: The application offers recipe suggestions tailored to the user's goals and preferences.
+- Culinary and Dietary Articles: Scidélice includes articles providing information on various culinary and dietary topics.
+
 ## Objectifs
 
 - Suivi de l'avancement du projet
