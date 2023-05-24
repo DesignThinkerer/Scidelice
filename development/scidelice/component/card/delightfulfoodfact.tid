@@ -1,9 +1,0 @@
-created: 20230523115141449
-modified: 20230524095536510
-title: $:/plugins/Telumire/Scidelice/Component/Card/DelightfulFoodFact
-
-<figure>
-  <blockquote cite="https://www.huxley.net/bnw/four.html">Le brocoli, le persil, les choux de Bruxelles et les poivrons rouges contiennent plus de vitamine C par portion de 100 g que les oranges. Les piments en contiennent 400% de plus.
-</blockquote>
-    <figcaption>— Caption, <cite>Source</cite></figcaption>
-</figure>
