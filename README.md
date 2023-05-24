@@ -1,4 +1,4 @@
-# Scidélice
+# Scidelice
 
 Scidélice is a progressive web application aimed at helping users learn to cook and plan their meals based on their specific needs. The application provides information on the calories and nutrients of recipes, allows users to create their own recipes, and offers personalized suggestions based on their goals and preferences. It also includes articles providing culinary and dietary information.
 
