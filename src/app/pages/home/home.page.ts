@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-// import { RecipeCardComponent } from 'src/app/components/recipe-card/recipe-card.component';
+import { RecipeCardComponent } from 'src/app/components/recipe-card/recipe-card.component';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +13,7 @@ import { IonicModule } from '@ionic/angular';
     IonicModule, 
     CommonModule, 
     FormsModule, 
-    // RecipeCardComponent
+    RecipeCardComponent
   ]
 })
 export class HomePage implements OnInit {

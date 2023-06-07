@@ -1,0 +1,27 @@
+img {
+    width: 200px;
+  }
+  
+  ion-card {
+    ion-card-subtitle {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  
+    .recipe-head {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-around;
+      width: 100%;
+    }
+    p {
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      // https://developer.mozilla.org/fr/docs/Web/CSS/-webkit-line-clamp
+      display: -webkit-box;
+      overflow: hidden;
+      white-space: normal;
+    }
+  }
+  
