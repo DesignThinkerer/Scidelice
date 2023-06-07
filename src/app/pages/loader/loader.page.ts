@@ -12,11 +12,11 @@ import { Router } from '@angular/router';
   imports: [IonicModule, CommonModule, FormsModule],
 })
 export class LoaderPage implements OnInit {
-
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   ngOnInit() {
-    this.router.navigate(['login']);
+    setTimeout(() => {
+      this.router.navigate(['login']);
+    }, 1000); //redirect after 1s
   }
-
 }
