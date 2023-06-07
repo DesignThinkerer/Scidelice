@@ -4,13 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { RecipeCardComponent } from 'src/app/components/recipe-card/recipe-card.component';
+import { PageHeaderComponent } from 'src/app/components/page-header/page-header.component';
 
 @Component({
   selector: 'app-recipes',
   templateUrl: './recipes.page.html',
   styleUrls: ['./recipes.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule, RecipeCardComponent]
+  imports: [IonicModule, CommonModule, FormsModule, RecipeCardComponent, PageHeaderComponent]
 })
 export class RecipesPage implements OnInit {
 
