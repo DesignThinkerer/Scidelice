@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { PageHeaderComponent } from 'src/app/components/page-header/page-header.component';
+import { PageHeaderComponent } from 'src/app/components/page.header/page.header.component';
 
 @Component({
   selector: 'app-new-recipe',

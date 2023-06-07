@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { PageHeaderComponent } from './page-header.component';
+import { PageHeaderComponent } from './page.header.component';
 
 describe('PageHeaderComponent', () => {
   let component: PageHeaderComponent;
