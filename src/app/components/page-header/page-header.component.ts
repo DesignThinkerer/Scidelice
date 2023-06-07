@@ -13,6 +13,7 @@ import { IonicModule } from '@ionic/angular';
 export class PageHeaderComponent  implements OnInit {
 
   @Input() pageTitle: string = 'Title of the current page';
+  @Input() previousPage: string = '';
 
   constructor() { }
 
