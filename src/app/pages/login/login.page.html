@@ -1,17 +1,36 @@
 <ion-content>
-  <div class="flex-center">
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title color="primary">Scidelice</ion-card-title>
-        <ion-card-subtitle>A smart cookbook</ion-card-subtitle>
-      </ion-card-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Name
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+   <ion-input label="Name" labelPlacement="floating" placeholder="Enter your name"></ion-input>
+    </ion-card-content>
+  </ion-card>
 
-      <ion-list>
-        <ion-item><ion-input label="Name" labelPlacement="floating" placeholder="Enter your name"></ion-input></ion-item>
-      </ion-list>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Do you like spicy food?
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+     <ion-radio-group>
+      <ion-item>
+        <ion-label>yes</ion-label>
+        <ion-radio value="spicy" slot="start"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>no</ion-label>
+        <ion-radio value="mild" slot="start"></ion-radio>
+      </ion-item>
+     </ion-radio-group>
+    </ion-card-content>
+  </ion-card>
 
-      <ion-button expand="block" color="success">Confirm</ion-button>
-      <ion-button expand="block" fill="clear" color="danger">Skip</ion-button>
-    </ion-card>
-  </div>
+  <ion-button size="full" color="light">
+    OK
+   </ion-button> 
 </ion-content>
