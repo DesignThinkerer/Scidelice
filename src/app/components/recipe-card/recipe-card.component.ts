@@ -23,7 +23,10 @@ export class RecipeCardComponent  implements OnInit {
 
   constructor(private router: Router) { }
 
-  goToRecipe(){this.router.navigate([this.recipeName]);}
+  goToRecipe(){
+    this.router.navigate([this.recipeName]);
+    console.log(`open the recipe : ${this.recipeName}`);
+  }
 
   ngOnInit() {}
 

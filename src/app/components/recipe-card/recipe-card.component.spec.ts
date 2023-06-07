@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed, fakeAsync, tick, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
@@ -23,8 +23,7 @@ describe('RecipeCardComponent', () => {
     spyOn(router, 'navigate');
 
     component.goToRecipe();
-
-    expect(router.navigate).toHaveBeenCalledWith(['recipes/recipe']);
+    expect(router.navigate).toHaveBeenCalledWith([component.recipeName]);
   });
 
 });
