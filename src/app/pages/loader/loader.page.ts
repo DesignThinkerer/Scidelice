@@ -15,6 +15,7 @@ export class LoaderPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    //execute on load
     console.log("hello world")
   }
 

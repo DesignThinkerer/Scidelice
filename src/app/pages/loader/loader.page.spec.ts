@@ -1,25 +1,47 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { provideRouter } from '@angular/router';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { Router, provideRouter } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { LoaderPage } from './loader.page';
 
+// describe('LoaderPage', () => {
+//   let component: LoaderPage;
+//   let fixture: ComponentFixture<LoaderPage>;
+
+//   beforeEach(async () => {
+//     await TestBed.configureTestingModule({
+//       imports: [LoaderPage, IonicModule],
+//       providers: [provideRouter([])],
+//     }).compileComponents();
+
+//     fixture = TestBed.createComponent(LoaderPage);
+//     component = fixture.componentInstance;
+//     fixture.detectChanges();
+//   });
+
+//   it('should create', () => {
+//     expect(component).toBeTruthy();
+//   });
+// });
+
 describe('LoaderPage', () => {
   let component: LoaderPage;
   let fixture: ComponentFixture<LoaderPage>;
+  let router: Router;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [LoaderPage, IonicModule],
-      providers: [provideRouter([])],
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      declarations: [LoaderPage],
+      imports: [IonicModule.forRoot()]
     }).compileComponents();
 
     fixture = TestBed.createComponent(LoaderPage);
+    router = TestBed.inject(Router); //testbed create an instance of router
     component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  }));
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    component.ngOnInit();
+    expect(router.navigate).toHaveBeenCalledWith(['login']);
   });
 });
