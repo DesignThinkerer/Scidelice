@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RecipeCardComponent } from 'src/app/components/recipe-card/recipe-card.component';
 import { PageHeaderComponent } from 'src/app/components/page-header/page-header.component';
-import { buttonNewRecipeComponent } from 'src/app/components/button-new-recipe/button-new-recipe.component';
+import { buttonNewRecipeComponent } from 'src/app/components/button.new.recipe/button.new.recipe.component';
 import { Router } from '@angular/router';
 
 @Component({

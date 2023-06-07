@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { buttonNewRecipeComponent } from './button-new-recipe.component';
+import { buttonNewRecipeComponent } from './button.new.recipe.component';
 
 describe('buttonNewRecipeComponent', () => {
   let component: buttonNewRecipeComponent;

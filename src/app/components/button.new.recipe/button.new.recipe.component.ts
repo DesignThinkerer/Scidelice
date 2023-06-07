@@ -5,8 +5,8 @@ import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'button-new-recipe',
-  templateUrl: './button-new-recipe.component.html',
-  styleUrls: ['./button-new-recipe.component.scss'],
+  templateUrl: './button.new.recipe.component.html',
+  styleUrls: ['./button.new.recipe.component.scss'],
   standalone: true,
   imports: [IonicModule, CommonModule]
 })

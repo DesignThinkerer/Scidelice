@@ -6,8 +6,8 @@ import { PageHeaderComponent } from 'src/app/components/page-header/page-header.
 
 @Component({
   selector: 'app-new-recipe',
-  templateUrl: './new-recipe.page.html',
-  styleUrls: ['./new-recipe.page.scss'],
+  templateUrl: './new.recipe.page.html',
+  styleUrls: ['./new.recipe.page.scss'],
   standalone: true,
   imports: [IonicModule, CommonModule, FormsModule, PageHeaderComponent]
 })
