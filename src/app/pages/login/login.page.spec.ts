@@ -31,7 +31,7 @@ describe('LoginPage', () => {
     expect(router.navigate).toHaveBeenCalledWith(['home']);
 
   });
-  it('should go to home page on register', (): void => {
+  it('should go to home page on register (for now)', (): void => {
     spyOn(router, 'navigate');
 
     component.ngOnInit();
