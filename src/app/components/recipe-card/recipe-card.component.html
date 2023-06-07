@@ -24,7 +24,7 @@
         <p><em>Notes: </em>{{ recipeNotes }}</p>
       </ion-label>
     </ion-item>
-    <ion-button color="primary" fill="clear" size="full">Open the recipe</ion-button>
+    <ion-button color="primary" fill="clear" size="full" (click)="goToRecipe()">Open the recipe</ion-button>
     <ng-content/> <!-- ng content is used to insert the content inside the component selector -->
   </ion-card-content>
 

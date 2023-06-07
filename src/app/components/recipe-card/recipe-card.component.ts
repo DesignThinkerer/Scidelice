@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common'; // required for ngIf
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 @Component({
   selector: 'app-recipe-card',
@@ -20,7 +21,9 @@ export class RecipeCardComponent  implements OnInit {
   @Input() recipeNotes: string = 'No notes yet!';
 
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  goToRecipe(){this.router.navigate([this.recipeName]);}
 
   ngOnInit() {}
 

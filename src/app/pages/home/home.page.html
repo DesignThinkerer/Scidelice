@@ -1,7 +1,7 @@
 <page-header pageTitle="Home"></page-header>
 
 <ion-content>
-  <ion-list>
+  <ion-card (click)="goToProfile()">
     <ion-item>
       <ion-avatar slot="start"><img src="assets/img/avatar.jpg" alt="avatar"/></ion-avatar>
       <ion-label>
@@ -9,7 +9,7 @@
         <p>Level: <span class="level">12</span></p>
       </ion-label>
     </ion-item>
-  </ion-list>
+  </ion-card>
 
   <app-recipe-card 
     [hasNotes]="false" 
@@ -21,7 +21,7 @@
   >This recipe card is in the home page</app-recipe-card>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button color="primary">
+    <ion-fab-button color="primary"  (click)="goToNewRecipe()">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab> 
