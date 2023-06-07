@@ -31,8 +31,7 @@ describe('LoaderPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [LoaderPage],
-      imports: [IonicModule.forRoot()]
+      imports: [IonicModule.forRoot() , LoaderPage]
     }).compileComponents();
 
     fixture = TestBed.createComponent(LoaderPage);
@@ -40,7 +39,7 @@ describe('LoaderPage', () => {
     component = fixture.componentInstance;
   }));
 
-  it('should create', () => {
+  it('should navigate', () => {
     component.ngOnInit();
     expect(router.navigate).toHaveBeenCalledWith(['login']);
   });
