@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">scidelice</string>
+    <string name="title_activity_main">scidelice</string>
+    <string name="package_name">ionic.scidelice</string>
+    <string name="custom_url_scheme">ionic.scidelice</string>
+</resources>
