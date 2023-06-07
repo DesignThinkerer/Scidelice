@@ -11,7 +11,8 @@ import { IonicModule } from '@ionic/angular';
 })
 export class RecipeCardComponent  implements OnInit {
   // recipe toggles
-  @Input() hasNotes: boolean = true;
+  @Input() showTitle: boolean = false;
+  @Input() showNotes: boolean = true;
 
   // recipe data
   @Input() recipeName: string = 'A cool recipe';

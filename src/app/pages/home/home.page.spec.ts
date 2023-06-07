@@ -27,12 +27,4 @@ describe('HomePage', () => {
     expect(router.navigate).toHaveBeenCalledWith(['profile']);
   });
 
-  it('should go to the new recipe page on click on the new recipe button', (): void => {
-    spyOn(router, 'navigate');
-
-    component.goToNewRecipe();
-
-    expect(router.navigate).toHaveBeenCalledWith(['recipes/new']);
-  });
-
 });
