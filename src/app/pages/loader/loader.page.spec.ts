@@ -4,26 +4,6 @@ import { IonicModule } from '@ionic/angular';
 
 import { LoaderPage } from './loader.page';
 
-// describe('LoaderPage', () => {
-//   let component: LoaderPage;
-//   let fixture: ComponentFixture<LoaderPage>;
-
-//   beforeEach(async () => {
-//     await TestBed.configureTestingModule({
-//       imports: [LoaderPage, IonicModule],
-//       providers: [provideRouter([])],
-//     }).compileComponents();
-
-//     fixture = TestBed.createComponent(LoaderPage);
-//     component = fixture.componentInstance;
-//     fixture.detectChanges();
-//   });
-
-//   it('should create', () => {
-//     expect(component).toBeTruthy();
-//   });
-// });
-
 describe('LoaderPage', () => {
   let component: LoaderPage;
   let fixture: ComponentFixture<LoaderPage>;
@@ -31,7 +11,7 @@ describe('LoaderPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [IonicModule.forRoot() , LoaderPage]
+      imports: [IonicModule.forRoot() , LoaderPage],
     }).compileComponents();
 
     fixture = TestBed.createComponent(LoaderPage);
@@ -40,6 +20,8 @@ describe('LoaderPage', () => {
   }));
 
   it('should navigate', () => {
+    spyOn(router, 'navigate');
+
     component.ngOnInit();
     expect(router.navigate).toHaveBeenCalledWith(['login']);
   });
