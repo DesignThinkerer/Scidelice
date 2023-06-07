@@ -8,13 +8,14 @@ import { IonicModule } from '@ionic/angular';
   templateUrl: './loader.page.html',
   styleUrls: ['./loader.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [IonicModule, CommonModule, FormsModule],
 })
 export class LoaderPage implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
+    console.log("hello world")
   }
 
 }
