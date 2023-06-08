@@ -19,11 +19,15 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-  login() {
-    this.router.navigate(['home']);
-  }
+  // login() {
+  //   this.router.navigate(['home']);
+  // }
 
-  register() {
+  // register() {
+  //   this.router.navigate(['home']);
+  // }
+
+  save(){
     this.router.navigate(['home']);
   }
 

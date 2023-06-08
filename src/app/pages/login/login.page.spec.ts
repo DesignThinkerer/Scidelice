@@ -19,23 +19,14 @@ describe('LoginPage', () => {
     component = fixture.componentInstance;
   });
 
-  it('should go to home page on login', (): void => {
+  it('should go to home page on save', (): void => {
 
     // expect(true).toBeFalsy(); TDD: always write a test that fails first to make sure the test is working
 
     spyOn(router, 'navigate');
 
     component.ngOnInit();
-    component.login();
-
-    expect(router.navigate).toHaveBeenCalledWith(['home']);
-
-  });
-  it('should go to home page on register (for now)', (): void => {
-    spyOn(router, 'navigate');
-
-    component.ngOnInit();
-    component.register();
+    component.save();
 
     expect(router.navigate).toHaveBeenCalledWith(['home']);
 
