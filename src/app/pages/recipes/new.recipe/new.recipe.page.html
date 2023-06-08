@@ -5,6 +5,51 @@
 </ion-header>
 
 <ion-content>
+  <form [formGroup]="form">
+
+    <ion-list>
+      <ion-item lines="inset">
+        <ion-label position="floating">Recipe name</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item lines="inset">
+        <ion-select placeholder="Difficulty">
+          <ion-select-option value="easy">Easy</ion-select-option>
+          <ion-select-option value="medium">Medium</ion-select-option>
+          <ion-select-option value="hard">Hard</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item lines="inset">
+        <ion-label>Recipe Picture</ion-label>
+        <ion-input type="file"></ion-input>
+      </ion-item>
+      <ion-item lines="inset">
+        <ion-label position="floating">Ingredients</ion-label>
+        <ion-textarea/>
+      </ion-item>
+      <ion-item lines="inset">
+        <ion-label position="floating">Steps</ion-label>
+        <ion-textarea/>
+      </ion-item>
+      <ion-item>
+        <!-- <ion-button size="full" color="light" (click)="save()">Save</ion-button> -->
+        <ion-button size="full" color="primary">Save</ion-button>
+      </ion-item>
+    </ion-list>
+
+  </form>
+</ion-content>
+
+
+<!-- Template for __viewing__ a single recipe:
+
+<ion-header>
+
+  <page-header pageTitle="Name of the recipe"></page-header>
+
+</ion-header>
+
+<ion-content>
   <ion-card>
     <ion-card-content>
       <img src="/assets/img/fallafel.png" alt="tasty falafel balls">
@@ -31,3 +76,5 @@
   </ion-list>
   <ion-button size="full" color="primary">Add recipe</ion-button>
 </ion-content>
+
+-->
