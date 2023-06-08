@@ -18,6 +18,19 @@
     </ion-card-header>
   </ion-card>
 
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title><ion-icon name="receipt-outline" color="primary"/> Shopping list</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let article of shoppingList">
+          <ion-checkbox justify="space-between"> {{ article }}</ion-checkbox>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
   <!-- todo: escape string -->
   <app-recipe-card 
   [showTitle]="true"
@@ -30,8 +43,5 @@
 ></app-recipe-card>
 
 
-
-
-
-<button-new-recipe></button-new-recipe>
+<!-- <button-new-recipe></button-new-recipe> -->
 </ion-content>

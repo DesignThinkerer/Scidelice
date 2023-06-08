@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
@@ -11,12 +11,12 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule, CommonModule]
 })
 
-export class buttonNewRecipeComponent  implements OnInit {
+export class buttonNewRecipeComponent  {
 
   constructor(private router: Router) { }
 
-  ngOnInit() {}
+  goToNewRecipe(){this.router.navigate(['recipes/new']);
 
-  goToNewRecipe(){this.router.navigate(['recipes/new']);}
+}
 
 }

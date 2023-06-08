@@ -22,7 +22,20 @@ import { Router } from '@angular/router';
   ]
 })
 export class HomePage {
-[x: string]: any;
+
+
+  shoppingList: string[] = [
+    'Chickpeas',
+    'Onions',
+    'Garlic',
+    'Coriander',
+    'Cumin',
+    'Flour',
+    'Salt',
+    'Pepper'
+  ];
+  
+
 
   constructor(private router: Router) { }
   goToProfile(){this.router.navigate(['profile']);}
