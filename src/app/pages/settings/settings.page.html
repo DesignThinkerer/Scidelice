@@ -10,24 +10,65 @@
   </page-header>
 
   <ion-card>
+    <ion-card-header>
+      <ion-card-title>Customize your settings</ion-card-title>
+    </ion-card-header>
+
     <ion-card-content>
-      <form >
-        <ion-list>
-          <ion-item lines="inset">
-            <ion-input label="Nickname" labelPlacement="floating" placeholder="Enter your nickname"></ion-input>
-          </ion-item>
-          <ion-item lines="inset">
-            <ion-label>Birth date</ion-label>
-            <ion-input type="date" position="floating"></ion-input>
-          </ion-item>
-          <ion-item lines="inset">
-            <ion-label>Avatar</ion-label>
-            <ion-input type="file"></ion-input>
-          </ion-item>
-        </ion-list>
-        <ion-button size="full" color="primary" (click)="save()">Save settings</ion-button> 
+      <form>
+        <ion-grid>
+          
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-input
+                  label="Nickname"
+                  labelPlacement="floating"
+                  placeholder="Enter your nickname"
+                />
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label>Birth date</ion-label>
+                <ion-datetime-button datetime="datetime"></ion-datetime-button>
+                <ion-modal [keepContentsMounted]="true">
+                  <ng-template>
+                    <ion-datetime
+                      id="datetime"
+                      min="2022-01-01"
+                      presentation="date"
+                    >
+                  </ion-datetime>
+                  </ng-template>
+                </ion-modal>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-input type="file" label="Avatar" labelPlacement="floating" placeholder="Select your avatar"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col >
+              <ion-item >
+                <ion-button  size="full" color="primary" (click)="save()">Save settings</ion-button> 
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </form>
     </ion-card-content>
   </ion-card>
+
+
 
 </ion-content>
