@@ -1,8 +1,13 @@
-<ion-header>
-
-  <page-header pageTitle={{recipeName}}></page-header>
-
-</ion-header>
+<page-header pageTitle="{{ recipeName }}">
+  <ion-buttons slot="secondary" toolbar>
+    <ion-button title="Edit recipe">
+      <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+    </ion-button>
+    <ion-button title="Export recipe">
+      <ion-icon slot="icon-only" name="send-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</page-header>
 
 <!-- TODO: use recipe-card component instead -->
 <ion-content>
@@ -30,5 +35,5 @@
       <ion-textarea/>
     </ion-item>
   </ion-list>
-  <ion-button size="full" color="primary">Edit the recipe</ion-button>
+  
 </ion-content>

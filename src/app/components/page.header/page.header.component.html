@@ -2,6 +2,7 @@
   <ion-toolbar>
     <ion-buttons slot="start"><ion-menu-button/> <ion-back-button text={{previousButtonText}}/></ion-buttons>
     <ion-title>{{pageTitle}}</ion-title>
+    <ng-content select="[toolbar]"></ng-content>
   </ion-toolbar>
-  <ng-content/>
+  <ng-content></ng-content>
 </ion-header>
