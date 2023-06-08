@@ -8,8 +8,8 @@
     <ion-card-content>
       <ion-list>
         <ion-item lines="inset">
-          <ion-label>Select a recipe file (.json)</ion-label>
-          <ion-input type="file"></ion-input>
+          <!-- .recipe use the .json format -->
+          <ion-input label="Select a recipe file" labelPlacement="floating" name="import" type="file" accept=".recipe"/>
         </ion-item>
         <!-- Only on mobile -->
         <ion-item lines="inset" *ngIf="isSupported">
