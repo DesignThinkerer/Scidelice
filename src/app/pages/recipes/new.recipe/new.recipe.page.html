@@ -1,12 +1,9 @@
 <ion-header>
-
   <page-header pageTitle="New recipe"></page-header>
-
 </ion-header>
 
 <ion-content>
   <form [formGroup]="form">
-
     <ion-list>
       <ion-item lines="inset">
         <ion-label position="floating">Recipe name</ion-label>
@@ -25,21 +22,17 @@
       </ion-item>
       <ion-item lines="inset">
         <ion-label position="floating">Ingredients</ion-label>
-        <ion-textarea/>
+        <ion-textarea />
       </ion-item>
       <ion-item lines="inset">
         <ion-label position="floating">Steps</ion-label>
-        <ion-textarea/>
-      </ion-item>
-      <ion-item>
-        <!-- <ion-button size="full" color="light" (click)="save()">Save</ion-button> -->
-        <ion-button size="full" color="primary">Save</ion-button>
+        <ion-textarea />
       </ion-item>
     </ion-list>
-
+    <!-- <ion-button size="full" color="light" (click)="save()">Save</ion-button> -->
+    <ion-button size="full" color="primary">Save</ion-button>
   </form>
 </ion-content>
-
 
 <!-- Template for __viewing__ a single recipe:
 
