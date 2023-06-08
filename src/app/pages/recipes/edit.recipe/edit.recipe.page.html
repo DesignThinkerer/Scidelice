@@ -1,7 +1,14 @@
-<ion-header>
-  <page-header pageTitle="New recipe"></page-header>
-</ion-header>
-
+<page-header [pageTitle]="pageTitle">
+  <!-- Desktop -->
+  <!-- <ion-buttons slot="secondary" toolbar>
+    <ion-button title="Edit recipe">
+      <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+    </ion-button>
+    <ion-button title="Export recipe">
+      <ion-icon slot="icon-only" name="send-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons> -->
+</page-header>
 <ion-content>
     
 <!-- desktop UI:
@@ -64,7 +71,7 @@
       <ion-icon name="download-outline"></ion-icon>
     </ion-fab-button>
     <!-- Scan QR code if supported by the OS -->
-    <ion-fab-button (click)="scan()" [disabled]="!isSupported" *ngIf="isSupported">
+    <ion-fab-button (click)="scan()" [disabled]="!QRisSupported" *ngIf="QRisSupported">
       <ion-icon name="scan"></ion-icon>
     </ion-fab-button>
   </ion-fab> 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule, NgIf } from '@angular/common';
 import {
   FormBuilder,
@@ -7,7 +7,7 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 //standalone components
 import { PageHeaderComponent } from 'src/app/components/page.header/page.header.component';
@@ -29,9 +29,18 @@ import { EditRecipeForm } from './edit.recipe.form';
     NgIf,
   ],
 })
-export class EditRecipePage {
+export class EditRecipePage implements OnInit {
+  route: ActivatedRoute = inject(ActivatedRoute);
   form!: FormGroup;
+  recipeName = '';
+  pageTitle:string = '';
+  QRisSupported = false;
 
+  ngOnInit() {
+    const editingRecipe = this.route.snapshot.params['id'];
+    this.pageTitle = editingRecipe ? "Edit "+editingRecipe : 'New Recipe';
+  }
+  
   constructor(private router: Router, private formBuilder: FormBuilder) {
     this.form = new EditRecipeForm(this.formBuilder).createForm();
   }
@@ -41,7 +50,6 @@ export class EditRecipePage {
     this.router.navigate(['/recipes']);
   }
 
-  isSupported = false;
   importRecipe() {
     console.log('import recipe file');
   }
