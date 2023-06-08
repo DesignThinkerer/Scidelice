@@ -1,27 +1,86 @@
-img {
-    width: 200px;
+
+
+ion-card {
+  figure{
+    display:flex;
+    flex-wrap: wrap;
+    
+    img {
+
+      flex-grow: 1;
+      flex-shrink: 1;
+      max-height: 300px;
+      object-fit: cover;
+    }
+
+    figcaption{
+      flex-basis: 300px;
+    }
+    
   }
-  
-  ion-card {
-    ion-card-subtitle {
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-  
-    .recipe-head {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: space-around;
-      width: 100%;
-    }
-    p {
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 3;
-      // https://developer.mozilla.org/fr/docs/Web/CSS/-webkit-line-clamp
-      display: -webkit-box;
-      overflow: hidden;
-      white-space: normal;
-    }
+  p {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    // https://developer.mozilla.org/fr/docs/Web/CSS/-webkit-line-clamp
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal;
   }
-  
+}
+
+[nutriscore] {
+  //width approx equal to 5 capital letters, if there is no more space, shrink down
+  flex-basis: calc(5 * 3ch);
+  padding: 0;
+  //reduce the font size as the width of the container shrinks
+  container-type: inline-size;
+  display: flex;
+  justify-content: center;
+  font-family: arial;
+  font-weight: bold;
+  place-items: center;
+  --radius: 0.6em;
+  color: rgba(255, 255, 255, 0.5);
+  --score-A-color: rgb(3, 129, 65);
+  --score-B-color: rgb(133, 187, 47);
+  --score-C-color: rgb(254, 203, 2);
+  --score-D-color: rgb(238, 129, 0);
+  --score-E-color: rgb(230, 62, 17);
+}
+
+[nutriscore] li {
+  font-size: 10cqw;
+  list-style: none;
+  padding: 0.5em 0.5em;
+}
+
+[nutriscore] :nth-child(1) {
+  background: var(--score-A-color);
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+[nutriscore] :nth-child(2) {
+  background: var(--score-B-color);
+}
+[nutriscore] :nth-child(3) {
+  background: var(--score-C-color);
+}
+[nutriscore] :nth-child(4) {
+  background: var(--score-D-color);
+}
+[nutriscore] :nth-child(5) {
+  background: var(--score-E-color);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+[nutriscore="A"] :nth-child(1),
+[nutriscore="B"] :nth-child(2),
+[nutriscore="C"] :nth-child(3),
+[nutriscore="D"] :nth-child(4),
+[nutriscore="E"] :nth-child(5) {
+  border: 2pt solid white;
+  border-radius: 0.5em;
+  color: white;
+  font-size: calc(10cqw + 2pt);
+  margin: 0 -0.3em;
+  padding: 0.7em 0.5em;
+  z-index: 1;
+}

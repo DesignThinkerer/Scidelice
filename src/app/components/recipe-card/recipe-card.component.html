@@ -2,38 +2,33 @@
   <ng-content select="[header]" />
 
   <ion-card-header>
-    <ion-card-title *ngIf="showTitle"
-      ><ion-icon name="receipt-outline" color="primary" /> Recipe of the
-      day</ion-card-title
-    >
+    
+    <ion-card-title *ngIf="showTitle">
+      <ion-icon name="receipt-outline" color="primary"/>Recipe of the day
+    </ion-card-title>
     <ion-card-subtitle>{{ recipeName }}</ion-card-subtitle>
   </ion-card-header>
-  <ion-card-content>
-    <ion-item>
-      <img src="{{ recipeImage }}" alt="{{ recipeImageAlt }}" />
-    </ion-item>
+  <ion-card-content >
+   <figure>
+    <img src="{{ recipeImage }}" alt="{{ recipeImageAlt }}" />
+    <figcaption>
     <ion-list>
       <ion-item>
-        <ion-icon
-          *ngIf="recipeDifficulty === 'easy'"
-          name="happy-outline"
-          color="success"
-        />
-        <ion-icon
-          *ngIf="recipeDifficulty === 'medium'"
-          name="sad-outline"
-          color="warning"
-        />
-        <ion-icon
-          *ngIf="recipeDifficulty === 'hard'"
-          name="skull-outline"
-          color="danger"
-        /> {{ recipeDifficulty }}
+        <ion-icon *ngIf="recipeDifficulty === 'easy'" name="happy-outline" color="success" slot="start" />
+        <ion-icon *ngIf="recipeDifficulty === 'medium'" name="sad-outline" color="warning" slot="start"/>
+        <ion-icon *ngIf="recipeDifficulty === 'hard'" name="skull-outline" color="danger" slot="start"/>
+        <ion-label> {{ recipeDifficulty }}</ion-label>
       </ion-item>
-      <ion-item><ion-icon name="time-outline"/> {{ recipeTime }}</ion-item>
-      <ion-item><ion-icon name="analytics-outline"/> {{ recipeCalories }}</ion-item>
-      <ion-item>{{ recipeNutriScore }}</ion-item>
+      <ion-item><ion-icon name="time-outline" slot="start"/> {{ recipeTime }}</ion-item>
+      <ion-item><ion-icon name="analytics-outline" slot="start"/> {{ recipeCalories }}</ion-item>
+      <ion-item>
+        <ul [attr.nutriscore]="recipeNutriScore">
+          <li>A</li><li>B</li><li>C</li><li>D</li><li>E</li>
+        </ul>
+      </ion-item>
     </ion-list>
+  </figcaption>
+   </figure>
 
     <!-- Display the notes only if there are notes & we allow notes to be displayed -->
     <ion-item lines="none" *ngIf="showNotes && recipeNotes">
