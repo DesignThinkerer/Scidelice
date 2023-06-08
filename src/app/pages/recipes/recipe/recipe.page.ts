@@ -15,6 +15,19 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class RecipePage {
   route: ActivatedRoute = inject(ActivatedRoute);
   recipeName = 'unknown';
+  
+  ingredients: string[] = [
+    'Chickpeas',
+    'Onions',
+    'Garlic',
+    'Coriander',
+    'Cumin',
+    'Flour',
+    'Salt',
+    'Pepper'
+  ];
+  
+
   constructor(private router: Router) {
     this.recipeName = this.route.snapshot.params['id'];
   }
