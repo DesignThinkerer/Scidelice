@@ -28,9 +28,15 @@
         <ion-label position="floating">Steps</ion-label>
         <ion-textarea />
       </ion-item>
+      <ion-item>
+        <!--TODO, see: https://forum.ionicframework.com/t/datetime-picker-hours-minutes-ex-3-hours-10-minutes/58364 -->
+        <ion-label position="floating">Duration</ion-label>
+        <ion-datetime presentation="time" ></ion-datetime>
+      </ion-item>
     </ion-list>
     <!-- <ion-button size="full" color="light" (click)="save()">Save</ion-button> -->
     <ion-button size="full" color="primary">Save</ion-button>
+
   </form>
 </ion-content>
 
