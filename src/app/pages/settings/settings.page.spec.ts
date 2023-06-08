@@ -2,19 +2,19 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
-import { LoginPage } from './login.page';
+import { SettingsPage } from './settings.page';
 
-describe('LoginPage', () => {
-  let component: LoginPage;
-  let fixture: ComponentFixture<LoginPage>;
+describe('SettingsPage', () => {
+  let component: SettingsPage;
+  let fixture: ComponentFixture<SettingsPage>;
   let router: Router;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [IonicModule.forRoot(), LoginPage],
+      imports: [IonicModule.forRoot(), SettingsPage],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(LoginPage);
+    fixture = TestBed.createComponent(SettingsPage);
     router = TestBed.inject(Router);
     component = fixture.componentInstance;
   });
