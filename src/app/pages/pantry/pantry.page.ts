@@ -25,7 +25,7 @@ export class PantryPage implements OnInit {
       foodName: new FormControl(null, { 
         validators: [Validators.required] 
       }),
-      datePlacedInFreezer: new FormControl(null, {
+      expirationDate: new FormControl(null, {
         validators: [Validators.required],
       }),
     });
