@@ -18,10 +18,10 @@ export class AppComponent {
     { title: 'Pantry', url: '/pantry', icon: 'snow' },
     // { title: 'Planner', url: '/planner', icon: 'calendar' },
     { title: 'Recipes', url: 'recipes', icon: 'journal' },
-    // { title: 'Settings', url: '/settings', icon: 'settings' },
+    { title: 'Settings', url: '/settings', icon: 'settings' },
     // { title: 'Success', url: '/success', icon: 'medal' },
     // { title: 'Tools', url: '/tools', icon: 'calculator' },
-    { title: 'Login', url: 'login', icon: 'log-in' },
+    // { title: 'Login', url: 'login', icon: 'log-in' },
   ];
   constructor() {}
 }

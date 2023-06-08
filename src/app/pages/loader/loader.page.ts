@@ -16,7 +16,7 @@ export class LoaderPage implements OnInit {
 
   ngOnInit() {
     setTimeout(() => {
-      this.router.navigate(['login']);
+      this.router.navigate(['home']);
     }, 1000); //redirect after 1s
   }
 }
