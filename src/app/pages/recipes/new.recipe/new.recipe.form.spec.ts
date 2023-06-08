@@ -1,25 +1,67 @@
 import { NewRecipeForm } from './new.recipe.form';
-import { FormBuilder } from '@angular/forms';
+import { Form, FormBuilder, FormGroup } from '@angular/forms';
 
 describe('NewRecipeForm', () => {
     
-    //TODO
+    let newRecipeForm: NewRecipeForm;
+    let form: FormGroup;
+    
+    beforeEach(() => {
+    
+         newRecipeForm = new NewRecipeForm(new FormBuilder());
+         form = newRecipeForm.createForm();
+
+    });
+
     it('should create recipe form empty', () => {
-        const newRecipeForm = new NewRecipeForm(new FormBuilder());
-        const form = newRecipeForm.createForm();
-        const idControl = form.get('id');
+        /*
+        object is possibly null error solved with not null assertion operator
+
+        https://stackoverflow.com/a/73316503
+        */
+        // const idControl = form.get('id');
+
+        // expect(idControl).not.toBeNull();
+        // if (idControl) {
+        //   expect(idControl.valid).toBeFalsy();
+        // }
 
         expect(form).not.toBeNull();
-
-        expect(idControl).not.toBeNull();
-        if (idControl) {
-          expect(idControl.valid).toBeFalsy();
-        }
-      
+        // name should not be null and have a default value of ''
         expect(form.get('name')).not.toBeNull();
+
+        //we are absolutely sure that can never be null, by using the ! operator
+        expect(form.get('name')!.value).toEqual("");
+        expect(form.get('name')!.valid).toBeFalsy();
+        
         expect(form.get('description')).not.toBeNull();
+        expect(form.get('description')!.value).toEqual("");
+
         expect(form.get('ingredients')).not.toBeNull();
+        expect(form.get('ingredients')!.value).toEqual("");
+
         expect(form.get('steps')).not.toBeNull();
+        expect(form.get('steps')!.value).toEqual("");
       });
+
+      it('should have name invalid if name is not valid', () => {
+        form.get('name')!.setValue('');
+        expect(form.get('name')!.valid).toBeFalsy();
+    });
+
+    it('should have name valid if name is valid', () => {
+        form.get('name')!.setValue('a unique recipe name');
+        expect(form.get('name')!.valid).toBeTruthy();
+    });
+
+    it('should have a valid form', () => {
+        form.get('name')!.setValue('a unique recipe name');
+        form.get('description')!.setValue('a description');
+        form.get('ingredients')!.setValue('ingredients');
+        form.get('steps')!.setValue('steps');
+        
+        expect(form.valid).toBeTruthy();
     }
+    );
+}
 );

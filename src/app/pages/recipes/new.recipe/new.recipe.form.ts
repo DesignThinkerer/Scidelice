@@ -1,4 +1,4 @@
-import { FormBuilder, FormGroup, Validators } from "@angular/forms"
+import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from "@angular/forms"
 
 export class NewRecipeForm {
 
@@ -8,15 +8,24 @@ export class NewRecipeForm {
         this.formBuilder = formBuilder;
     }
 
-    //TODO
     createForm() : FormGroup {
         return this.formBuilder.group({
-            id: ['',Validators.required],
-            name: [''],
+            name: ['',Validators.required, Validators.minLength(3), this.validateName.bind(this)],
             description: [''],
             ingredients: [''],
             steps: ['']
             });
     }
+
+    validateName(control: AbstractControl): ValidationErrors | null {
+        // Assuming an array of existing names called "existingNames", to be validated the name must not be in the array
+        const existingNames: string[] = ['falafels', 'waffle', 'spaghetti bolognese'];
+      
+        if (existingNames.includes(control.value)) {
+          return { uniqueName: false }; // Return an error if the name is not unique
+        }
+      
+        return null; // Return null if the name is unique
+      }
 
 }

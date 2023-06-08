@@ -9,8 +9,7 @@ describe('buttonNewRecipeComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ buttonNewRecipeComponent ],
-      imports: [IonicModule.forRoot()]
+      imports: [IonicModule.forRoot(), buttonNewRecipeComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(buttonNewRecipeComponent);
