@@ -10,7 +10,8 @@ export class NewRecipeForm {
 
     createForm() : FormGroup {
         return this.formBuilder.group({
-            name: ['',Validators.required, Validators.minLength(3)
+            name: [''
+            // ,Validators.required, Validators.minLength(3)
             //, this.validateName.bind(this)
           ],
             description: [''],
