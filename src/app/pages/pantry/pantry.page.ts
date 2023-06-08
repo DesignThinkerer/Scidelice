@@ -35,8 +35,9 @@ export class PantryPage implements OnInit {
   addFood() {
     console.log(this.form);
     this.foodService.addFood({
-      name: this.form.value.foodName,
+      foodName: this.form.value.foodName,
       expirationDate: this.form.value.expirationDate,
     });
+    this.form.reset(); //empty the form after adding food
   }
 }

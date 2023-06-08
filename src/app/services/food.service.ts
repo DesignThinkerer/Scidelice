@@ -1,15 +1,11 @@
 import { Injectable } from "@angular/core";
 
-interface FoodItem {
-  name: string;
-  expirationDate: Date;
-}
-
+import { Food } from "../models/food.model";
 @Injectable({
   providedIn: 'root'
 })
 export class FoodService {
-  private _allFood: FoodItem[] = [];
+  private _allFood: Food[] = [];
 
   get allFood() {
     return this._allFood;
@@ -17,7 +13,7 @@ export class FoodService {
 
   constructor() { }
 
-  addFood(foodItem: FoodItem) {
+  addFood(foodItem: Food) {
     this._allFood = [foodItem, ...this._allFood];
     console.log(this._allFood);
   }
