@@ -30,4 +30,8 @@ export const routes: Routes = [
     path: 'pantry',
     loadComponent: () => import('./pages/pantry/pantry.page').then( m => m.PantryPage)
   },
+  {
+    path: 'recipes/recipe/:id',
+    loadComponent: () => import('./pages/recipes/recipe/recipe.page').then( m => m.RecipePage)
+  },
 ];

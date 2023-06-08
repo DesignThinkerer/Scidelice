@@ -1,0 +1,34 @@
+<ion-header>
+
+  <page-header pageTitle={{recipeName}}></page-header>
+
+</ion-header>
+
+<!-- TODO: use recipe-card component instead -->
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <img src="/assets/img/falafel.png" alt="tasty falafel balls">
+      <p>
+        <ion-card-header>Fallafels</ion-card-header>
+        <ion-list>
+          <ion-item>Chickpeas</ion-item>
+          <ion-item>Onions</ion-item>
+          <ion-item>Garlic</ion-item>
+          <ion-item>Coriander</ion-item>
+          <ion-item>Cumin</ion-item>
+          <ion-item>Flour</ion-item>
+          <ion-item>Salt</ion-item>
+          <ion-item>Pepper</ion-item>
+          </ion-list>
+      </p>
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-item lines="inset">
+      <ion-label position="floating">Notes</ion-label>
+      <ion-textarea/>
+    </ion-item>
+  </ion-list>
+  <ion-button size="full" color="primary">Edit the recipe</ion-button>
+</ion-content>
