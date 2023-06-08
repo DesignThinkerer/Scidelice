@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormGroup, FormControl, Validators, ReactiveFormsModule} from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { PageHeaderComponent } from 'src/app/components/page.header/page.header.component';
+import { FoodService } from 'src/app/services/food.service';
 @Component({
   selector: 'app-pantry',
   templateUrl: './pantry.page.html',
@@ -18,7 +19,7 @@ import { PageHeaderComponent } from 'src/app/components/page.header/page.header.
 export class PantryPage implements OnInit {
   form!: FormGroup;
 
-  constructor() {}
+  constructor(private foodService: FoodService) {}
 
   ngOnInit() {
     this.form = new FormGroup({
@@ -33,5 +34,9 @@ export class PantryPage implements OnInit {
 
   addFood() {
     console.log(this.form);
+    this.foodService.addFood({
+      name: this.form.value.foodName,
+      expirationDate: this.form.value.expirationDate,
+    });
   }
 }
