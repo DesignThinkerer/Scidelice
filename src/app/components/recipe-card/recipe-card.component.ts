@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common'; // required for ngIf
+import { CommonModule, NgIf } from '@angular/common'; // required for ngIf
 import { Component, Input, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
   templateUrl: './recipe-card.component.html',
   styleUrls: ['./recipe-card.component.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule]
+  imports: [IonicModule, CommonModule, NgIf]
 })
 export class RecipeCardComponent  {
   // recipe toggles
@@ -16,7 +16,7 @@ export class RecipeCardComponent  {
 
   // recipe data
   @Input() recipeName: string = 'A cool recipe';
-  @Input() recipeDifficulty: string = 'unknown';
+  @Input() recipeDifficulty: string = 'easy';
   @Input() recipeImage: string = '/assets/img/falafel.png';
   @Input() recipeImageAlt: string = 'this is a picture of a recipe';
   @Input() recipeNotes: string = 'No notes yet!';

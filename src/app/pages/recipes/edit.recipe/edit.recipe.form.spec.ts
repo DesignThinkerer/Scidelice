@@ -1,15 +1,15 @@
-import { NewRecipeForm } from './new.recipe.form';
+import { EditRecipeForm } from './edit.recipe.form';
 import { Form, FormBuilder, FormGroup } from '@angular/forms';
 
-describe('NewRecipeForm', () => {
+describe('EditRecipeForm', () => {
     
-    let newRecipeForm: NewRecipeForm;
+    let editRecipeForm: EditRecipeForm;
     let form: FormGroup;
     
     beforeEach(() => {
     
-         newRecipeForm = new NewRecipeForm(new FormBuilder());
-         form = newRecipeForm.createForm();
+         editRecipeForm = new EditRecipeForm(new FormBuilder());
+         form = editRecipeForm.createForm();
 
     });
 

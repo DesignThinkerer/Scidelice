@@ -1,6 +1,6 @@
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from "@angular/forms"
 
-export class NewRecipeForm {
+export class EditRecipeForm {
 
     private formBuilder: FormBuilder;
 

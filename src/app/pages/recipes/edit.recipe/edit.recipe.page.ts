@@ -13,12 +13,12 @@ import { Router } from '@angular/router';
 import { PageHeaderComponent } from 'src/app/components/page.header/page.header.component';
 
 //tools
-import { NewRecipeForm } from './new.recipe.form';
+import { EditRecipeForm } from './edit.recipe.form';
 
 @Component({
-  selector: 'app-new-recipe',
-  templateUrl: './new.recipe.page.html',
-  styleUrls: ['./new.recipe.page.scss'],
+  selector: 'app-edit-recipe',
+  templateUrl: './edit.recipe.page.html',
+  styleUrls: ['./edit.recipe.page.scss'],
   standalone: true,
   imports: [
     IonicModule,
@@ -29,11 +29,11 @@ import { NewRecipeForm } from './new.recipe.form';
     NgIf,
   ],
 })
-export class NewRecipePage {
+export class EditRecipePage {
   form!: FormGroup;
 
   constructor(private router: Router, private formBuilder: FormBuilder) {
-    this.form = new NewRecipeForm(this.formBuilder).createForm();
+    this.form = new EditRecipeForm(this.formBuilder).createForm();
   }
 
   createRecipe() {

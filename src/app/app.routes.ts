@@ -24,7 +24,7 @@ export const routes: Routes = [
   },
   {
     path: 'recipes/new',
-    loadComponent: () => import('./pages/recipes/new.recipe/new.recipe.page').then( m => m.NewRecipePage)
+    loadComponent: () => import('./pages/recipes/edit.recipe/edit.recipe.page').then( m => m.EditRecipePage)
   },
   {
     path: 'pantry',
@@ -33,5 +33,9 @@ export const routes: Routes = [
   {
     path: 'recipes/recipe/:id',
     loadComponent: () => import('./pages/recipes/recipe/recipe.page').then( m => m.RecipePage)
+  },
+  {
+    path: 'recipes/recipe/:id/edit',
+    loadComponent: () => import('./pages/recipes/edit.recipe/edit.recipe.page').then( m => m.EditRecipePage)
   },
 ];
