@@ -4,13 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { PageHeaderComponent } from 'src/app/components/page.header/page.header.component';
 import { ActivatedRoute, Router } from '@angular/router';
+import { RecipeCardComponent } from 'src/app/components/recipe-card/recipe-card.component';
 
 @Component({
   selector: 'app-recipe',
   templateUrl: './recipe.page.html',
   styleUrls: ['./recipe.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule, PageHeaderComponent],
+  imports: [IonicModule, CommonModule, FormsModule, PageHeaderComponent, RecipeCardComponent],
 })
 export class RecipePage {
   route: ActivatedRoute = inject(ActivatedRoute);

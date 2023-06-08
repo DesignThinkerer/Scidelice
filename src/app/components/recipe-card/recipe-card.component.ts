@@ -12,7 +12,9 @@ import { IonicModule } from '@ionic/angular';
 export class RecipeCardComponent  {
   // recipe toggles
   @Input() showTitle: boolean = false;
+  @Input() showSubTitle: boolean = true;
   @Input() showNotes: boolean = true;
+  @Input() isPreview: boolean = true; //if true, do not show full content
 
   // recipe data
   @Input() recipeName: string = 'A cool recipe';

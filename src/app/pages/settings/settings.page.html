@@ -2,33 +2,24 @@
   <page-header pageTitle="Settings"></page-header>
 
   <ion-card>
-    <ion-card-header>
-      <ion-card-title>
-        Nickname
-      </ion-card-title>
-    </ion-card-header>
     <ion-card-content>
-   <ion-input label="Name" labelPlacement="floating" placeholder="Enter your nickname"></ion-input>
+      <form >
+        <ion-list>
+          <ion-item lines="inset">
+            <ion-input label="Nickname" labelPlacement="floating" placeholder="Enter your nickname"></ion-input>
+          </ion-item>
+          <ion-item lines="inset">
+            <ion-label>Birth date</ion-label>
+            <ion-input type="date" position="floating"></ion-input>
+          </ion-item>
+          <ion-item lines="inset">
+            <ion-label>Avatar</ion-label>
+            <ion-input type="file"></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-button size="full" color="primary" (click)="save()">Save settings</ion-button> 
+      </form>
     </ion-card-content>
   </ion-card>
 
-  <!-- <ion-card>
-    <ion-card-header>
-      <ion-card-title>
-        Do you like spicy food?
-      </ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-     <ion-radio-group>
-      <ion-item>
-        <ion-radio value="spicy" slot="start">yes</ion-radio>
-      </ion-item>
-      <ion-item>
-        <ion-radio value="mild" slot="start">no</ion-radio>
-      </ion-item>
-     </ion-radio-group>
-    </ion-card-content>
-  </ion-card> -->
-
-  <ion-button size="full" color="light" (click)="save()">Save</ion-button> 
 </ion-content>

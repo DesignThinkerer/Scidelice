@@ -10,56 +10,73 @@
   </ion-buttons> -->
 </page-header>
 
-<!-- TODO: use recipe-card component instead -->
 <ion-content>
-  <ion-card >
-    <ion-card-content class="flex-wrap">
-      <figure>
-      <img src="/assets/img/falafel.png" alt="tasty falafel balls">
-      <figcaption>
-      
-        <ion-card-header>Ingredients</ion-card-header>
-        <ion-list>
-          <ion-item *ngFor="let ingredient of ingredients">{{ ingredient }}</ion-item>
-          </ion-list>
-      
-    </figcaption>
-    </figure>
+  <app-recipe-card 
+  [isPreview]="false"
+  [showTitle]="false"
+  [showSubTitle]="false"
+  [showNotes]="true" 
+  [recipeName]="'Falafel Balls'" 
+  [recipeDifficulty]="'easy'"
+  [recipeTime]="'30 min'"
+  [recipeCalories]="'120kcal'"
+  [recipeNutriScore]="'A'"
+  [recipeImage]="'/assets/img/falafel.png'" 
+  [recipeImageAlt]="'Tasty falafel balls'" 
+  [recipeNotes]="'Wow! The falafels were amazing! I followed the recipe to the letter, and I have to say the result was delicious. The texture was perfect, and the flavors were well-balanced. I added a personal touch by using an extra spice blend, which gave it a delicious spicy note.'"
+></app-recipe-card>
+  <ion-card>
+    <ion-card-header>Ingredients</ion-card-header>
+    <ion-list>
+      <ion-item *ngFor="let ingredient of ingredients"
+        ><ion-checkbox>{{ ingredient }}</ion-checkbox></ion-item
+      >
+    </ion-list>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>Instructions</ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>1. Mix all the ingredients</ion-item>
+        <ion-item>2. Fry the balls</ion-item>
+        <ion-item>3. Enjoy!</ion-item>
+      </ion-list>
     </ion-card-content>
   </ion-card>
-<ion-card>
-<ion-card-header>Instructions</ion-card-header>
+
+  <ion-card>
     <ion-card-content>
-    <ion-list>
-      <ion-item>1. Mix all the ingredients</ion-item>
-      <ion-item>2. Fry the balls</ion-item>
-      <ion-item>3. Enjoy!</ion-item>
-    </ion-list>
-  </ion-card-content>
-</ion-card>
+      <ion-list>
+        <ion-item lines="inset">
+          <ion-textarea
+            label="Notes"
+            labelPlacement="floating"
+            value="Nice recipe, it was fun to make!"
+          />
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 
-<ion-card>
-<ion-card-content>
-  <ion-list>
-    <ion-item lines="inset">
-      <ion-textarea label="Notes" labelPlacement="floating" value="Nice recipe, it was fun to make!"/>
-    </ion-item>
-  </ion-list>
-</ion-card-content>
-</ion-card>
-
-<!-- Smartphone -->
+  <!-- Smartphone -->
 
   <ion-fab vertical="bottom" horizontal="start" slot="fixed">
-    <ion-fab-button color="primary" title="Click to export the recipe" (click)="exportRecipe()">
+    <ion-fab-button
+      color="primary"
+      title="Click to export the recipe"
+      (click)="exportRecipe()"
+    >
       <ion-icon name="send-outline"></ion-icon>
     </ion-fab-button>
-  </ion-fab> 
+  </ion-fab>
 
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed" >
-    <ion-fab-button color="primary"  title="Click to edit the recipe" (click)="editRecipe()">
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button
+      color="primary"
+      title="Click to edit the recipe"
+      (click)="editRecipe()"
+    >
       <ion-icon name="create-outline"></ion-icon>
     </ion-fab-button>
-  </ion-fab> 
-  
+  </ion-fab>
 </ion-content>
