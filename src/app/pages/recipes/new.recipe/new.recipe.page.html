@@ -3,41 +3,65 @@
 </ion-header>
 
 <ion-content>
-  <form [formGroup]="form">
-    <ion-list>
-      <ion-item lines="inset">
-        <ion-label position="floating">Recipe name</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
-      <ion-item lines="inset">
-        <ion-select placeholder="Difficulty">
-          <ion-select-option value="easy">Easy</ion-select-option>
-          <ion-select-option value="medium">Medium</ion-select-option>
-          <ion-select-option value="hard">Hard</ion-select-option>
-        </ion-select>
-      </ion-item>
-      <ion-item lines="inset">
-        <ion-label>Recipe Picture</ion-label>
-        <ion-input type="file"></ion-input>
-      </ion-item>
-      <ion-item lines="inset">
-        <ion-label position="floating">Ingredients</ion-label>
-        <ion-textarea />
-      </ion-item>
-      <ion-item lines="inset">
-        <ion-label position="floating">Steps</ion-label>
-        <ion-textarea />
-      </ion-item>
-      <ion-item>
-        <!--TODO, see: https://forum.ionicframework.com/t/datetime-picker-hours-minutes-ex-3-hours-10-minutes/58364 -->
-        <ion-label position="floating">Duration</ion-label>
-        <ion-datetime presentation="time" ></ion-datetime>
-      </ion-item>
-    </ion-list>
-    <!-- <ion-button size="full" color="light" (click)="save()">Save</ion-button> -->
-    <ion-button size="full" color="primary">Save</ion-button>
-
-  </form>
+  <ion-card>
+    <ion-card-header>Import a recipe</ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item lines="inset">
+          <ion-label>Select a recipe file (.json)</ion-label>
+          <ion-input type="file"></ion-input>
+        </ion-item>
+        <!-- Only on mobile -->
+        <ion-item lines="inset" *ngIf="isSupported">
+          <ion-label>Scan a QR Code</ion-label>
+            <ion-button (click)="scan()" [disabled]="!isSupported">
+            <ion-icon name="scan"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-card-header>Create a recipe</ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="form">
+        <ion-list>
+          <ion-item lines="inset">
+            <ion-label position="floating">Recipe name</ion-label>
+            <ion-input ></ion-input>
+          </ion-item>
+          <ion-item lines="inset">
+    
+            <ion-label position="floating">Difficulty</ion-label>
+            <ion-select>
+              <ion-select-option value="easy">Easy</ion-select-option>
+              <ion-select-option value="medium">Medium</ion-select-option>
+              <ion-select-option value="hard">Hard</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item lines="inset">
+            <ion-label position="floating">Ingredients</ion-label>
+            <ion-textarea />
+          </ion-item>
+          <ion-item lines="inset">
+            <ion-label position="floating">Steps</ion-label>
+            <ion-textarea />
+          </ion-item>
+          <ion-item lines="inset">
+            <!--TODO, see: https://forum.ionicframework.com/t/datetime-picker-hours-minutes-ex-3-hours-10-minutes/58364 -->
+              <ion-label>Duration</ion-label>
+              <ion-input type="time" position="floating" value="00:00"></ion-input>
+          </ion-item>
+          <ion-item lines="inset">
+            <ion-label>Recipe Picture</ion-label>
+            <ion-input type="file"></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-button size="full" color="primary" (click)="createRecipe()">Save</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
 
 <!-- Template for __viewing__ a single recipe:

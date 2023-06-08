@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
@@ -15,7 +15,7 @@ import { NewRecipeForm } from './new.recipe.form';
   templateUrl: './new.recipe.page.html',
   styleUrls: ['./new.recipe.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule, PageHeaderComponent, ReactiveFormsModule]
+  imports: [IonicModule, CommonModule, FormsModule, PageHeaderComponent, ReactiveFormsModule, NgIf]
 })
 export class NewRecipePage implements OnInit {
 
@@ -31,5 +31,10 @@ export class NewRecipePage implements OnInit {
     console.log("createRecipe");
     this.router.navigate(['/recipes']);
   }
+
+  isSupported= false;
+  scan(){
+    console.log("scan begin");
+}
 
 }
