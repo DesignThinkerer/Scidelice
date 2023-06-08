@@ -3,27 +3,21 @@
 </ion-header>
 
 <ion-content>
+    
+<!-- desktop UI:
   <ion-card>
     <ion-card-header>Import a recipe</ion-card-header>
     <ion-card-content>
       <ion-list>
         <ion-item lines="inset">
-          <!-- .recipe use the .json format -->
           <ion-input label="Select a recipe file" labelPlacement="floating" name="import" type="file" accept=".recipe"/>
         </ion-item>
-        <!-- Only on mobile -->
-        <ion-item lines="inset" *ngIf="isSupported">
-          <ion-label>Scan a QR Code</ion-label>
-            <ion-button (click)="scan()" [disabled]="!isSupported">
-            <ion-icon name="scan"></ion-icon>
-          </ion-button>
-        </ion-item>
-      </ion-list>
     </ion-card-content>
   </ion-card>
-  
+   -->
+
   <ion-card>
-    <ion-card-header>Create a recipe</ion-card-header>
+    <ion-card-header>Edit recipe</ion-card-header>
     <ion-card-content>
       <ion-item>
         <form [formGroup]="form">
@@ -64,4 +58,14 @@
       <ion-button size="full" color="primary" (click)="createRecipe()">Save</ion-button>
     </ion-card-content>
   </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="primary" title="Click to import a recipe" (click)="importRecipe()">
+      <ion-icon name="download-outline"></ion-icon>
+    </ion-fab-button>
+    <!-- Scan QR code if supported by the OS -->
+    <ion-fab-button (click)="scan()" [disabled]="!isSupported" *ngIf="isSupported">
+      <ion-icon name="scan"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> 
 </ion-content>
