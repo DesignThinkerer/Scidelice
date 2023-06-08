@@ -49,6 +49,7 @@ describe('NewRecipeForm', () => {
         expect(form.get('name')!.valid).toBeFalsy();
     });
 
+    //TODO: Fix this test
     it('should have name valid if name is valid', () => {
         form.get('name')!.setValue('a unique recipe name');
         expect(form.get('name')!.valid).toBeTruthy();

@@ -17,6 +17,8 @@ export class NewRecipeForm {
             });
     }
 
+    //TODO check if validateName works properly
+
     validateName(control: AbstractControl): ValidationErrors | null {
         // Assuming an array of existing names called "existingNames", to be validated the name must not be in the array
         const existingNames: string[] = ['falafels', 'waffle', 'spaghetti bolognese'];
