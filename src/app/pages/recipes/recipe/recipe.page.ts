@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { PageHeaderComponent } from 'src/app/components/page.header/page.header.component';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-recipe',
@@ -15,10 +15,21 @@ import { ActivatedRoute } from '@angular/router';
 export class RecipePage {
   route: ActivatedRoute = inject(ActivatedRoute);
   recipeName = 'unknown';
-  constructor() {
+  constructor(private router: Router) {
     this.recipeName = this.route.snapshot.params['id'];
   }
 
-  exportRecipe() {console.log('exportRecipe');}
-  editRecipe() { console.log('editRecipe');}
+  navigate(path: string){
+    this.router.navigateByUrl(path);
+  }
+
+  exportRecipe() {
+    console.log('exportRecipe');
+  }
+  
+  editRecipe() {
+    console.log('show the new recipe page, import the recipe in the edit page, then on save replace the original recipe with the new recipe');
+    this.navigate('/recipes/new');
+}
+
 }
