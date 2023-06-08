@@ -29,7 +29,6 @@ export class RecipePage {
   
   editRecipe() {
     console.log('show the new recipe page, import the recipe in the edit page, then on save replace the original recipe with the new recipe');
-    this.navigate('/recipes/new');
+    this.navigate('recipes/recipe/'+this.recipeName+'/edit');
 }
-
 }
