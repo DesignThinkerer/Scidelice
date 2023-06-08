@@ -50,6 +50,9 @@ describe('NewRecipeForm', () => {
     });
 
     //TODO: Fix these tests (seems async related)
+
+    //see https://youtu.be/3gaVbroD-l8?t=397
+    
     // it('should have name valid if name is valid', () => {
     //     form.get('name')!.setValue('some name for the recipe');
     //     expect(form.get('name')!.valid).toBeTruthy();
