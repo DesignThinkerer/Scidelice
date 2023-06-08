@@ -38,6 +38,8 @@ export class HomePage {
 
 
   constructor(private router: Router) { }
+
   goToProfile(){this.router.navigate(['profile']);}
+  goToPantry(){this.router.navigate(['pantry']);}
 
 }
