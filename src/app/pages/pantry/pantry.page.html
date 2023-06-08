@@ -52,7 +52,7 @@
 
           <ion-row>
             <ion-col>
-                <ion-button size="full" color="primary" (click)="addFood()">
+                <ion-button size="full" color="primary" (click)="addFood()" [disabled]="!form.valid">
                   Add
                 </ion-button>
             </ion-col>
