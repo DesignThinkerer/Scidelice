@@ -15,7 +15,7 @@ export class AppComponent {
     // { title: 'Profile', url: '/profile', icon: 'person' },
     // { title: 'How', url: '/how', icon: 'flask' },
     // { title: 'Why', url: '/why', icon: 'school' },
-    // { title: 'Pantry', url: '/pantry', icon: 'snow' },
+    { title: 'Pantry', url: '/pantry', icon: 'snow' },
     // { title: 'Planner', url: '/planner', icon: 'calendar' },
     { title: 'Recipes', url: 'recipes', icon: 'journal' },
     // { title: 'Settings', url: '/settings', icon: 'settings' },
