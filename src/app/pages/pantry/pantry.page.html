@@ -1,10 +1,39 @@
 <ion-content>
   <page-header pageTitle="Pantry">
-
     <!-- input to search the recipes -->
     <ion-toolbar>
-    <ion-searchbar secondary-toolbar placeholder="Search the pantry" show-clear-button="focus" ></ion-searchbar>
-  </ion-toolbar>
+      <ion-searchbar
+        secondary-toolbar
+        placeholder="Search the pantry"
+        show-clear-button="focus"
+      ></ion-searchbar>
+    </ion-toolbar>
   </page-header>
-  
+
+  <ion-card>
+    <ion-card-header>Add food to pantry</ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="form">
+        <ion-list>
+          <ion-item lines="inset">
+            <ion-label position="floating">Food name</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item lines="inset">
+            <ion-label>Expiration date</ion-label>
+            <ion-input type="date" position="floating"></ion-input>
+
+            <!-- <ion-datetime presentation="date"></ion-datetime> -->
+          </ion-item>
+          <ion-item lines="inset">
+            <ion-label>Food picture</ion-label>
+            <ion-input type="file"></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-button size="full" color="primary" (click)="addFood()"
+          >Save</ion-button
+        >
+      </form>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

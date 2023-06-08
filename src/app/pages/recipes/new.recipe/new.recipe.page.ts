@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule, NgIf } from '@angular/common';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
@@ -17,15 +17,13 @@ import { NewRecipeForm } from './new.recipe.form';
   standalone: true,
   imports: [IonicModule, CommonModule, FormsModule, PageHeaderComponent, ReactiveFormsModule, NgIf]
 })
-export class NewRecipePage implements OnInit {
+export class NewRecipePage {
 
   form!: FormGroup;
 
   constructor(private router: Router, private formBuilder: FormBuilder) { 
     this.form = new NewRecipeForm(this.formBuilder).createForm();
   }
-
-  ngOnInit() {}
 
   createRecipe() {
     console.log("createRecipe");
