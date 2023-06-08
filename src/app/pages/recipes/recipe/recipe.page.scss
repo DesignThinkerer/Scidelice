@@ -1,12 +1,40 @@
-.flex-wrap{
-    display: flex;
-    flex-wrap: wrap;
-}
-img{
-    max-height: 50dvh;
-    object-fit: contain;
-}
+// .flex-wrap{
+//     display: flex;
+//     flex-wrap: wrap;
+// }
+// img{
+//     max-height: 50dvh;
+//     object-fit: contain;
+// }
 
-ion-button{
-    margin: 15px;
-}
+// ion-button{
+//     margin: 15px;
+// }
+
+ion-card {
+    figure{
+      display:flex;
+      flex-wrap: wrap;
+      
+      img {
+  
+        flex-grow: 1;
+        flex-shrink: 1;
+        max-height: 50vh;
+        object-fit: cover;
+      }
+  
+      figcaption{
+        flex:1;
+      }
+      
+    }
+    p {
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      // https://developer.mozilla.org/fr/docs/Web/CSS/-webkit-line-clamp
+      display: -webkit-box;
+      overflow: hidden;
+      white-space: normal;
+    }
+  }

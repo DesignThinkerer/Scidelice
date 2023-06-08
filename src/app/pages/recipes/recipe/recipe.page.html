@@ -14,13 +14,17 @@
 <ion-content>
   <ion-card >
     <ion-card-content class="flex-wrap">
+      <figure>
       <img src="/assets/img/falafel.png" alt="tasty falafel balls">
-      <p>
+      <figcaption>
+      
         <ion-card-header>Ingredients</ion-card-header>
         <ion-list>
           <ion-item *ngFor="let ingredient of ingredients">{{ ingredient }}</ion-item>
           </ion-list>
-      </p>
+      
+    </figcaption>
+    </figure>
     </ion-card-content>
   </ion-card>
 <ion-card>
