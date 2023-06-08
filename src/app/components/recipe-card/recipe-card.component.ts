@@ -20,6 +20,11 @@ export class RecipeCardComponent  {
   @Input() recipeImage: string = '/assets/img/falafel.png';
   @Input() recipeImageAlt: string = 'this is a picture of a recipe';
   @Input() recipeNotes: string = 'No notes yet!';
+  
+  @Input() recipeTime: string = 'A cool recipe';
+  @Input() recipeCalories: string = 'easy';
+  @Input() recipeNutriScore: string = '/assets/img/falafel.png';
+
 
 
   constructor(private router: Router) { }

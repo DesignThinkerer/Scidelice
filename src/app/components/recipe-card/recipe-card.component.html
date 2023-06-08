@@ -1,32 +1,52 @@
 <ion-card>
-  <ng-content select="[header]"/>
-  
+  <ng-content select="[header]" />
+
   <ion-card-header>
-    <ion-card-title *ngIf="showTitle"><ion-icon name="receipt-outline" color="primary"/> Recipe of the day</ion-card-title>
+    <ion-card-title *ngIf="showTitle"
+      ><ion-icon name="receipt-outline" color="primary" /> Recipe of the
+      day</ion-card-title
+    >
     <ion-card-subtitle>{{ recipeName }}</ion-card-subtitle>
   </ion-card-header>
   <ion-card-content>
     <ion-item>
-      <p class="recipe-head">
-      <img src={{recipeImage}} alt={{recipeImageAlt}}>
-      <ion-label>
-        <p>
-          <ion-icon *ngIf="recipeDifficulty === 'easy'" name="happy-outline" color="success"/>
-          <ion-icon *ngIf="recipeDifficulty === 'medium'" name="sad-outline" color="warning"/>
-          <ion-icon *ngIf="recipeDifficulty === 'hard'" name="skull-outline" color="danger"/>
-          Difficulty: <span class="level">{{ recipeDifficulty }}</span></p>
-      </ion-label>
-      </p>
+      <img src="{{ recipeImage }}" alt="{{ recipeImageAlt }}" />
     </ion-item>
+    <ion-list>
+      <ion-item>
+        <ion-icon
+          *ngIf="recipeDifficulty === 'easy'"
+          name="happy-outline"
+          color="success"
+        />
+        <ion-icon
+          *ngIf="recipeDifficulty === 'medium'"
+          name="sad-outline"
+          color="warning"
+        />
+        <ion-icon
+          *ngIf="recipeDifficulty === 'hard'"
+          name="skull-outline"
+          color="danger"
+        /> {{ recipeDifficulty }}
+      </ion-item>
+      <ion-item><ion-icon name="time-outline"/> {{ recipeTime }}</ion-item>
+      <ion-item><ion-icon name="analytics-outline"/> {{ recipeCalories }}</ion-item>
+      <ion-item>{{ recipeNutriScore }}</ion-item>
+    </ion-list>
+
     <!-- Display the notes only if there are notes & we allow notes to be displayed -->
-    <ion-item lines="none"  *ngIf="showNotes && recipeNotes">
+    <ion-item lines="none" *ngIf="showNotes && recipeNotes">
       <ion-label>
         <p><em>Notes: </em>{{ recipeNotes }}</p>
       </ion-label>
     </ion-item>
-    <ion-button color="primary" fill="clear" size="full" (click)="goToRecipe()">Open the recipe</ion-button>
-    <ng-content/> <!-- ng content is used to insert the content inside the component selector -->
+    <ion-button color="primary" fill="clear" size="full" (click)="goToRecipe()"
+      >Open the recipe</ion-button
+    >
+    <ng-content />
+    <!-- ng content is used to insert the content inside the component selector -->
   </ion-card-content>
 
-  <ng-content select="[footer]"/>
+  <ng-content select="[footer]" />
 </ion-card>
