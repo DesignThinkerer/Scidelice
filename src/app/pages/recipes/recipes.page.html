@@ -9,21 +9,22 @@
 
 
 
-  <app-recipe-card 
-  [isPreview]="true"
-  [showTitle]="false"
-  [showSubTitle]="true"
-  [showNotes]="true" 
-  [recipeName]="'Falafel Balls'" 
-  [recipeDifficulty]="'easy'"
-  [recipeTime]="'30 min'"
-  [recipeCalories]="'120kcal'"
-  [recipeNutriScore]="'A'"
-  [recipeImage]="'/assets/img/falafel.png'" 
-  [recipeImageAlt]="'Tasty falafel balls'" 
-  [recipeNotes]="'Wow! The falafels were amazing! I followed the recipe to the letter, and I have to say the result was delicious. The texture was perfect, and the flavors were well-balanced. I added a personal touch by using an extra spice blend, which gave it a delicious spicy note.'"
-></app-recipe-card>
+  <!-- TODO: replace this placeholder by a true list of recipes -->
+    <app-recipe-card  *ngFor="let item of [].constructor(10); let i = index"
+    [isPreview]="true"
+    [showTitle]="false"
+    [showSubTitle]="true"
+    [showNotes]="false" 
+    [recipeName]="'Falafel Balls'" 
+    [recipeDifficulty]="'easy'"
+    [recipeTime]="'30 min'"
+    [recipeCalories]="'120kcal'"
+    [recipeNutriScore]="'A'"
+    [recipeImage]="'/assets/img/falafel.png'" 
+    [recipeImageAlt]="'Tasty falafel balls'" 
+    [recipeNotes]="'Wow! The falafels were amazing! I followed the recipe to the letter, and I have to say the result was delicious. The texture was perfect, and the flavors were well-balanced. I added a personal touch by using an extra spice blend, which gave it a delicious spicy note.'"
+  ></app-recipe-card>
 
-  <button-new-recipe></button-new-recipe>
-  
 </ion-content>
+
+<button-new-recipe></button-new-recipe>
