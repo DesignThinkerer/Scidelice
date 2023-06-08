@@ -18,4 +18,7 @@ export class RecipePage {
   constructor() {
     this.recipeName = this.route.snapshot.params['id'];
   }
+
+  exportRecipe() {console.log('exportRecipe');}
+  editRecipe() { console.log('editRecipe');}
 }

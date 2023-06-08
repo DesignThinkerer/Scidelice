@@ -40,13 +40,13 @@
   <!-- Smartphone -->
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button color="primary" title="Click to export the recipe">
+    <ion-fab-button color="primary" title="Click to export the recipe" (click)="exportRecipe()">
       <ion-icon name="send-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab> 
-  
-  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
-    <ion-fab-button color="primary"  title="Click to edit the recipe">
+
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed" >
+    <ion-fab-button color="primary"  title="Click to edit the recipe" (click)="editRecipe()">
       <ion-icon name="create-outline"></ion-icon>
     </ion-fab-button>
   </ion-fab> 
