@@ -2,7 +2,7 @@ import { APP_INITIALIZER, Provider } from '@angular/core';
 import { FoodService } from './food.service';
 
 export function initializeFoodService(foodService: FoodService) {
-  return () => foodService.initStorage();
+  return () => foodService.initialize();
 }
 
 export const FoodServiceProvider: Provider = {

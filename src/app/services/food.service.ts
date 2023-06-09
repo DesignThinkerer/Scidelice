@@ -39,4 +39,8 @@ export class FoodService {
   getAllFood(): Food[] {
     return this.allFood;
   }
+
+  initialize() {
+    return this.initStorage();
+  }
 }
