@@ -67,3 +67,5 @@ To summarize:
 In this case, allFoodInFreezer represents the entire list of food items and we want to update the entire list, therefore using .set() is the appropriate choice.
 */  
 }
+
+//TODO: Use IonViewInEnter and NgDestroy to subscribe and unsubscribe to the allFoodInFreezer signal.
