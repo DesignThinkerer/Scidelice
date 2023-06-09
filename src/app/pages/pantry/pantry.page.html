@@ -65,10 +65,15 @@
 
   
   <ion-card>
-    <ion-card>
-      <ion-item *ngFor="let food of allFoodInFreezer()">
-        <ion-label>{{ food.foodName }}</ion-label>
-        <ion-label>{{ food.expirationDate }}</ion-label>
+    <ion-card-content>
+      <ion-item>
+        <ion-button size="full" color="danger" (click)="clearAllFood()">Clean up the pantry</ion-button>
       </ion-item>
-    </ion-card>  </ion-card>
+  
+        <ion-item *ngFor="let food of allFoodInFreezer()">
+          <ion-label>{{ food.foodName }}</ion-label>
+          <ion-label>{{ calculateDaysLeft(food.expirationDate) }}</ion-label>
+        </ion-item>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

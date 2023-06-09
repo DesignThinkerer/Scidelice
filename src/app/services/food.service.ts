@@ -40,6 +40,11 @@ export class FoodService {
     return this.allFood;
   }
 
+  clearAllFood() {
+    this.allFood = []; // Clear the allFood array
+    this.storage.remove('allFood'); // Remove the 'allFood' key from the local storage
+  }
+
   initialize() {
     return this.initStorage();
   }

@@ -50,6 +50,11 @@ export class PantryPage implements OnInit {
     this.form.reset();
   }
 
+  clearAllFood() {
+    this.foodService.clearAllFood(); // Call the `clearAllFood` method in the `FoodService` to remove all data
+    this.allFoodInFreezer.set([]); // Update the `allFoodInFreezer` signal with an empty array
+  }
+
   /*
 The reason we use .set() instead of .update() in this case is because the allFoodInFreezer signal is a writable signal, not a computed signal.
 
@@ -66,6 +71,25 @@ To summarize:
 
 In this case, allFoodInFreezer represents the entire list of food items and we want to update the entire list, therefore using .set() is the appropriate choice.
 */  
+
+calculateDaysLeft(expirationDate: string): string {
+  const now = new Date();
+  const expDate = new Date(expirationDate);
+  const timeDiff = expDate.getTime() - now.getTime();
+  const daysLeft = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+  if (daysLeft < 0) {
+    return "Expired. Throw it away!";
+  } else if (daysLeft === 0) {
+    return "Will expire today!";
+  } else if (daysLeft === 1) {
+    return "Will expire tomorrow!";
+  } else {
+    return `${daysLeft} days left.`;
+  }
+}
+
+
 }
 
 //TODO: Use IonViewInEnter and NgDestroy to subscribe and unsubscribe to the allFoodInFreezer signal.
