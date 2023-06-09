@@ -61,4 +61,14 @@
       </form>
     </ion-card-content>
   </ion-card>
+
+
+  
+  <ion-card>
+    <ion-card>
+      <ion-item *ngFor="let food of allFoodInFreezer()">
+        <ion-label>{{ food.foodName }}</ion-label>
+        <ion-label>{{ food.expirationDate }}</ion-label>
+      </ion-item>
+    </ion-card>  </ion-card>
 </ion-content>
