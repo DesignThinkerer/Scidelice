@@ -17,6 +17,6 @@ bootstrapApplication(AppComponent, {
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     importProvidersFrom(IonicModule.forRoot({})),
     provideRouter(routes),
-    importProvidersFrom(IonicStorageModule.forRoot()),
+    importProvidersFrom(IonicStorageModule.forRoot())
   ],
 });
