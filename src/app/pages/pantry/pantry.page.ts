@@ -19,7 +19,8 @@ import { Food } from 'src/app/models/food.model';
 })
 export class PantryPage implements OnInit {
   form!: FormGroup;
-  allFoodInFreezer = signal<Food[]>([]); // signal is a type of observable that can be subscribed to. It is a signal that emits a value whenever the value of the signal is updated. In this case, the signal emits the value of the allFood array whenever the value of the allFood array is updated.
+  allFoodInFreezer = signal<Food[]>([]); 
+  // signal is a type of observable that can be subscribed to. It is a signal that emits a value whenever the value of the signal is updated. In this case, the signal emits the value of the allFood array whenever the value of the allFood array is updated.
    
   constructor(private foodService: FoodService) {}
 
