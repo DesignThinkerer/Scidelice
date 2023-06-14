@@ -4,6 +4,36 @@ Scidélice is a progressive web application developed as part of my graduation p
 
 Its goal is to assist users in learning how to cook and plan their meals according to their nutritional needs and preferences. The application provides information on the calories and nutrients of recipes, enables users to create their own recipes, and offers personalized suggestions based on their goals and preferences. Additionally, it includes articles that provide culinary and dietary information. Scidélice is developed using Angular, Ionic, and TiddlyWiki for prototyping purposes.
 
+# Diagram
+
+```mermaid
+erDiagram
+    User {
+        string Name
+    }
+    Recipe {
+        string RecipeId PK
+        string Title
+        string Description
+        string Instructions
+        string ImageUrl
+    }
+    Ingredient {
+        string IngredientId PK
+        string Name
+        string Quantity
+        string RecipeId FK
+    }
+    Category {
+        string CategoryId PK
+        string Name
+    }
+    RecipeCategory {
+        string RecipeId PK, FK
+        string CategoryId PK, FK
+    }
+```
+
 # Features
 
 - Recipe Database: Scidélice integrates with the Open Food Facts database to retrieve nutritional information for recipes.
