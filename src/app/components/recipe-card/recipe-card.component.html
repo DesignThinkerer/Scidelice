@@ -4,7 +4,7 @@
   <ion-card-header>
     
     <ion-card-title *ngIf="showTitle">
-      <ion-icon name="receipt-outline" color="primary"/>Recipe of the day
+      <ion-icon name="receipt-outline" color="primary"/>Recette du jour
     </ion-card-title>
     <ion-card-subtitle *ngIf="showSubTitle">{{ recipeName }}</ion-card-subtitle>
   </ion-card-header>
@@ -37,7 +37,7 @@
       </ion-label>
     </ion-item>
     <ion-button color="primary" fill="clear" size="full" (click)="goToRecipe()" *ngIf="isPreview"
-      >Open the recipe</ion-button
+      >Ouvrir la recette</ion-button
     >
     <ng-content />
     <!-- ng content is used to insert the content inside the component selector -->

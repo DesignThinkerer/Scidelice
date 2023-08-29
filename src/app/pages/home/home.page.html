@@ -1,4 +1,4 @@
-<page-header pageTitle="Home"></page-header>
+<page-header pageTitle="Accueil"></page-header>
 
 <ion-content>
   <!-- Hidding profile card for now -->
@@ -14,14 +14,14 @@
 
   <ion-card>
     <ion-card-header>
-      Hello there! Ready to cook ?
+      Bonjour! Prêt à cuisiner?
     </ion-card-header>
   </ion-card>
 
   <ion-card>
     <ion-card-header>
       <ion-card-title>
-        <ion-icon name="cart-outline" color="primary"/>Shopping list
+        <ion-icon name="cart-outline" color="primary"/>Liste de courses
       </ion-card-title>
     </ion-card-header>
     <ion-card-content>
@@ -31,7 +31,7 @@
         </ion-item>
       </ion-list>
 
-      <ion-button color="primary" fill="clear" size="full" (click)="goToPantry()">Open the pantry</ion-button>
+      <ion-button color="primary" fill="clear" size="full" (click)="goToPantry()">Ouvrir le frigo</ion-button>
     </ion-card-content>
   </ion-card>
 
@@ -39,14 +39,14 @@
   <app-recipe-card 
   [showTitle]="true"
   [showNotes]="true" 
-  [recipeName]="'Falafel Balls'" 
+  [recipeName]="'Boulettes de falafel'" 
   [recipeDifficulty]="'easy'"
   [recipeTime]="'30 min'"
   [recipeCalories]="'120kcal'"
   [recipeNutriScore]="'A'"
   [recipeImage]="'/assets/img/falafel.png'" 
   [recipeImageAlt]="'Tasty falafel balls'" 
-  [recipeNotes]="'Wow! The falafels were amazing! I followed the recipe to the letter, and I have to say the result was delicious. The texture was perfect, and the flavors were well-balanced. I added a personal touch by using an extra spice blend, which gave it a delicious spicy note.'"
+  [recipeNotes]="'Wow ! Les falafels étaient incroyables ! La texture était parfaite et les saveurs étaient bien équilibrées.'"
 ></app-recipe-card>
 
 

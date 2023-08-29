@@ -1,9 +1,9 @@
 <ion-content>
-  <page-header pageTitle="Settings">
+  <page-header pageTitle="Paramètres">
     <ion-toolbar>
       <ion-searchbar
         secondary-toolbar
-        placeholder="Search the settings"
+        placeholder="Chercher dans les paramètres"
         show-clear-button="focus"
       ></ion-searchbar>
     </ion-toolbar>
@@ -11,7 +11,7 @@
 
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Customize your settings</ion-card-title>
+      <ion-card-title>Personnalisez vos informations</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
@@ -22,9 +22,9 @@
             <ion-col>
               <ion-item>
                 <ion-input
-                  label="Nickname"
+                  label="Nom"
                   labelPlacement="floating"
-                  placeholder="Enter your nickname"
+                  placeholder="Entrez votre nom"
                 />
               </ion-item>
             </ion-col>
@@ -33,7 +33,7 @@
           <ion-row>
             <ion-col>
               <ion-item>
-                <ion-label>Birth date</ion-label>
+                <ion-label>Date de naissance</ion-label>
                 <ion-datetime-button datetime="datetime"></ion-datetime-button>
                 <ion-modal [keepContentsMounted]="true">
                   <ng-template>
@@ -60,7 +60,7 @@
           <ion-row>
             <ion-col >
               <ion-item >
-                <ion-button  size="full" color="primary" (click)="save()">Save settings</ion-button> 
+                <ion-button  size="full" color="primary" (click)="save()">Enregistrer</ion-button> 
               </ion-item>
             </ion-col>
           </ion-row>
