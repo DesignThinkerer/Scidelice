@@ -25,14 +25,15 @@ export class HomePage {
 
 
   shoppingList: string[] = [
-    'Chickpeas',
-    'Onions',
-    'Garlic',
-    'Coriander',
-    'Cumin',
-    'Flour',
-    'Salt',
-    'Pepper'
+'Pois chiches',
+'Oignons',
+'Ail',
+'Coriandre',
+'Cumin',
+'Farine',
+'Sel',
+'Poivre'
+
   ];
   
 

@@ -18,14 +18,15 @@ export class RecipePage {
   recipeName = 'unknown';
   
   ingredients: string[] = [
-    'Chickpeas',
-    'Onions',
-    'Garlic',
-    'Coriander',
-    'Cumin',
-    'Flour',
-    'Salt',
-    'Pepper'
+'Pois chiches',
+'Oignons',
+'Ail',
+'Coriandre',
+'Cumin',
+'Farine',
+'Sel',
+'Poivre'
+
   ];
   
 
