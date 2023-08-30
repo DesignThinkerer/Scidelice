@@ -19,6 +19,6 @@ bootstrapApplication(AppComponent, {
     importProvidersFrom(IonicModule.forRoot({})),
     provideRouter(routes),
     importProvidersFrom(IonicStorageModule.forRoot()),
-    [FoodServiceProvider]
+    [FoodServiceProvider],
   ],
 });
